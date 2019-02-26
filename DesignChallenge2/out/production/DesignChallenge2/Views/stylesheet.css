@@ -2,7 +2,8 @@
     -fx-background-color:transparent;
 }
 .pane{
-    -fx-background-color:#333333;
+    /*-fx-background-color:#333333;*/
+    -fx-background-image: url("test.jpg");
 }
 .trans-btn-white-border{
     -fx-background-color:transparent;

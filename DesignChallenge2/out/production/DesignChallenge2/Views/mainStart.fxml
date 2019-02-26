@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="980.0" styleClass="parent" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Controller">
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="980.0" styleClass="parent" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Controller">
    <children>
       <Pane layoutY="140.0" prefHeight="400.0" prefWidth="980.0" styleClass="pane">
          <children>
@@ -16,24 +16,24 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="33.0" layoutY="145.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="250.0" text="Lorem ipsum is a dummy text used as a placeholder in websites." textFill="WHITE" wrapText="true">
+            <Label layoutX="33.0" layoutY="145.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="250.0" text="Register now to start dancing to the music" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="689.0" layoutY="105.0" text="Have An Account?" textFill="WHITE">
+            <Label layoutX="689.0" layoutY="105.0" text="Already Have An Account?" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="689.0" layoutY="145.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="250.0" text="Lorem ipsum is a dummy text used as a placeholder in websites." textFill="WHITE" wrapText="true">
+            <Label layoutX="689.0" layoutY="145.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="250.0" text="Press the button below to go back to the login page" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button layoutX="689.0" layoutY="216.0" mnemonicParsing="false" onAction="#openLogin" styleClass="trans-btn-white-border" text="Log In" />
-            <Button layoutX="33.0" layoutY="208.0" mnemonicParsing="false" onAction="#openRegistration" styleClass="trans-btn-white-border" text="Register" />
-            <VBox fx:id="vbox" layoutX="14.0" layoutY="-45.0" prefHeight="480.0" prefWidth="480.0" styleClass="white-pane" />
+            <JFXButton layoutX="689.0" layoutY="225.0" onAction="#openLogin" styleClass="trans-btn-white-border" text="Login" textFill="#f2eded" />
+            <JFXButton layoutX="33.0" layoutY="225.0" onAction="#openRegistration" styleClass="trans-btn-white-border" text="Register Now!" />
+            <VBox fx:id="vbox" layoutX="14.0" layoutY="-40.0" prefHeight="480.0" prefWidth="480.0" styleClass="white-pane" />
          </children>
       </Pane>
    </children>
