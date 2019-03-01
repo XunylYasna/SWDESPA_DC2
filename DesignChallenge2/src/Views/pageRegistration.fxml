@@ -6,13 +6,13 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StartController">
    <children>
       <Label layoutX="32.0" layoutY="149.0" text="Sign Up" />
       <JFXTextField layoutX="32.0" layoutY="213.0" prefHeight="26.0" prefWidth="330.0" promptText="Username" styleClass="tf" stylesheets="@stylesheet.css" />
       <JFXTextField layoutX="32.0" layoutY="260.0" prefHeight="26.0" prefWidth="330.0" promptText="E-mail" styleClass="tf" />
       <JFXPasswordField layoutX="32.0" layoutY="315.0" prefHeight="26.0" prefWidth="330.0" promptText="Password" styleClass="tf" />
       <JFXButton layoutX="384.0" layoutY="401.0" text="Register" />
-      <JFXButton fx:id="exitButton" layoutX="416.0" layoutY="14.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" prefHeight="32.0" prefWidth="32.0" styleClass="exit-btn" text="Button" />
+      <JFXButton fx:id="registrationExitButton" layoutX="416.0" layoutY="14.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" onAction="#closeWindow" prefHeight="32.0" prefWidth="32.0" styleClass="exit-btn" text="Button" />
    </children>
 </AnchorPane>

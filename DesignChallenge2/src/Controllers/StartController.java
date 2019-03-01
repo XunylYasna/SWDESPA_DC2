@@ -1,6 +1,7 @@
 package Controllers;
 
 import javafx.animation.TranslateTransition;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +25,6 @@ public class StartController implements Initializable {
 
     private Parent fxml;
 
-    public Button exitButton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -74,9 +74,8 @@ public class StartController implements Initializable {
         });
     }
 
-    @FXML
-    public void handleCloseButtonAction(ActionEvent event) {
-        Stage stage = (Stage) exitButton.get.getWindow();
-        stage.close();
+    public void closeWindow(ActionEvent actionEvent) {
+        Platform.exit();
+        System.exit(0);
     }
 }
