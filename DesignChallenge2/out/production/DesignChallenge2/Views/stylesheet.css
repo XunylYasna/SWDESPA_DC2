@@ -3,8 +3,15 @@
 }
 .pane{
     /*-fx-background-color:#333333;*/
-    -fx-background-image: url("test.jpg");
+    -fx-background-image: url("res/test.jpg");
 }
+
+.exit-btn{
+    -fx-background-color: pink;
+    /*transparent;*/
+    /*-fx-background-image: url("res/close.png");*/
+}
+
 .trans-btn-white-border{
     -fx-background-color:transparent;
     -fx-background-radius:5px;

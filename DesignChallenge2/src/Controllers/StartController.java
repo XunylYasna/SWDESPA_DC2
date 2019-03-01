@@ -7,20 +7,24 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Controller implements Initializable {
+public class StartController implements Initializable {
 
     @FXML
     private VBox vbox;
 
     private Parent fxml;
+
+    public Button exitButton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -33,7 +37,7 @@ public class Controller implements Initializable {
                 vbox.getChildren().removeAll();
                 vbox.getChildren().setAll(fxml);
             } catch (IOException ex) {
-                Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(StartController.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
     }
@@ -48,7 +52,7 @@ public class Controller implements Initializable {
                 vbox.getChildren().removeAll();
                 vbox.getChildren().setAll(fxml);
             } catch (IOException ex) {
-                Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(StartController.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         });
@@ -64,9 +68,15 @@ public class Controller implements Initializable {
                 vbox.getChildren().removeAll();
                 vbox.getChildren().setAll(fxml);
             } catch (IOException ex) {
-                Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(StartController.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         });
+    }
+
+    @FXML
+    public void handleCloseButtonAction(ActionEvent event) {
+        Stage stage = (Stage) exitButton.get.getWindow();
+        stage.close();
     }
 }
