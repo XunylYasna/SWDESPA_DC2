@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -17,7 +16,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="33.0" layoutY="145.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="250.0" text="Register now to start dancing to the music" textFill="WHITE" wrapText="true">
+            <Label layoutX="33.0" layoutY="135.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="250.0" text="Register now or Log in as a Guest to start dancing to the music" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font>
@@ -33,11 +32,9 @@
                </font>
             </Label>
             <JFXButton layoutX="689.0" layoutY="225.0" onAction="#openLogin" styleClass="trans-btn-white-border" text="Login" textFill="#f2eded" />
-            <JFXButton layoutX="33.0" layoutY="225.0" onAction="#openRegistration" styleClass="trans-btn-white-border" text="Register Now!" />
-            <VBox fx:id="vbox" layoutX="14.0" layoutY="-40.0" prefHeight="480.0" prefWidth="480.0" styleClass="white-pane">
-               <children>
-                  <Button mnemonicParsing="false" text="Button" />
-               </children></VBox>
+            <JFXButton layoutX="33.0" layoutY="208.0" onAction="#openRegistration" styleClass="trans-btn-white-border" text="Register Now!" />
+            <JFXButton layoutX="158.0" layoutY="208.0" onAction="#loginGuest" styleClass="trans-btn-white-border" text="Log in as Guest" />
+            <VBox fx:id="vbox" layoutX="14.0" layoutY="-40.0" prefHeight="480.0" prefWidth="480.0" styleClass="white-pane" />
          </children>
       </Pane>
    </children>

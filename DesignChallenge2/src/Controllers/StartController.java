@@ -1,14 +1,19 @@
 package Controllers;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.awt.*;
@@ -22,7 +27,6 @@ public class StartController implements Initializable {
 
     @FXML
     private VBox vbox;
-
     private Parent fxml;
 
 
@@ -74,8 +78,15 @@ public class StartController implements Initializable {
         });
     }
 
-    public void closeWindow(ActionEvent actionEvent) {
-        Platform.exit();
-        System.exit(0);
+    public void loginGuest(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../Views/musicGuest.fxml"));
+        Scene scene = new Scene(root);
+
+//        get stage
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
     }
+
+
 }
