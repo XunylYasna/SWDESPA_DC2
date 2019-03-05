@@ -3,13 +3,32 @@
 }
 .pane{
     /*-fx-background-color:#333333;*/
-    -fx-background-image: url("res/test.jpg");
+    -fx-background-image: url("../res/test.jpg");
 }
 
 .exit-btn{
     -fx-background-color: pink;
     /*transparent;*/
     /*-fx-background-image: url("res/close.png");*/
+}
+
+.main-lbl{
+    -fx-font-size: 18px;
+}
+
+.sumbit-btn{
+    -fx-background-color:transparent;
+    -fx-background-radius:5px;
+    -fx-border-color:#cccccc;
+    -fx-border-radius:5px;
+    -fx-border-width:1px;
+    -fx-text-fill: black;
+}
+
+.forgot-btn{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-text-fill: black;
 }
 
 .trans-btn-white-border{

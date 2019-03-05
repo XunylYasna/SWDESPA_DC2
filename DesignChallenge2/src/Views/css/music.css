@@ -1,0 +1,50 @@
+.split-pane *.split-pane-divider {
+    -fx-padding: 1 0 1 0;
+}
+
+.split-pane{
+    -fx-padding: 0 0 0 0;
+}
+
+.sidepane{
+    -fx-background-color: #333333;
+}
+
+.side-btn{
+    -fx-background-color:transparent;
+    /*-fx-background-radius:5px;*/
+    /*-fx-border-color:#cccccc;*/
+    /*-fx-border-radius:5px;*/
+    /*-fx-border-width:1px;*/
+    -fx-border-color: transparent;
+    -fx-text-fill:whitesmoke;
+    -fx-text-alignment: left;
+    -fx-alignment: left;
+    -fx-pref-width: 200px;
+    -fx-padding: 5 0 5 20
+}
+
+.side-btn:hover{
+    /*-fx-background-insets: 0 0 -1 0, 0, 1, 2;*/
+    /*-fx-background-radius: 3px, 3px, 2px, 1px;*/
+    /*-fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; !* 4 8 4 8 *!*/
+    /*-fx-text-fill: -fx-text-base-color;*/
+    -fx-background-color: #626262;
+    -fx-text-alignment: left;
+    -fx-alignment: left;
+    -fx-pref-width: 200px;
+    -fx-padding: 5 0 5 20
+}
+
+.bottom-bar{
+    -fx-background-color: #333333;
+}
+
+.top-bar{
+    -fx-background-color: #333333;
+}
+
+.top-item{
+    -fx-text-fill: white;
+    -fx-background-color: #333333;
+}
