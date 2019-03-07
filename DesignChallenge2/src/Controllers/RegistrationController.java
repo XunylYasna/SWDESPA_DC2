@@ -1,5 +1,6 @@
 package Controllers;
 
+import Database.RegistrationHandler;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -24,7 +25,10 @@ public class RegistrationController {
 
     @FXML
     void register(ActionEvent event){
+        RegistrationHandler regis = new RegistrationHandler();
+        regis.registration(usernameTf.getText(), emailTf.getText(), passwordPf.getText());
         System.out.println(usernameTf.getText() + " " + emailTf.getText() + " " + passwordPf.getText());
+
     }
 
     @FXML
