@@ -12,7 +12,7 @@
       <JFXTextField fx:id="usernameTf" layoutX="42.0" layoutY="223.0" prefHeight="26.0" prefWidth="330.0" promptText="Username" styleClass="tf" stylesheets="@../css/start.css" />
       <JFXPasswordField fx:id="passwordPf" layoutX="42.0" layoutY="287.0" prefHeight="26.0" prefWidth="330.0" promptText="Password" styleClass="tf" />
       <JFXButton fx:id="loginBtn" layoutX="388.0" layoutY="405.0" onAction="#login" styleClass="sumbit-btn" text="Login" />
-      <JFXButton fx:id="exitBtn" layoutX="415.0" layoutY="14.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" onAction="#exitProgram" prefHeight="32.0" prefWidth="32.0" styleClass="exit-btn" text="Button" />
+      <JFXButton fx:id="exitBtn" layoutX="415.0" layoutY="14.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" onAction="#exitProgram" prefHeight="32.0" prefWidth="32.0" styleClass="close-btn" text="Button" />
       <JFXButton fx:id="forgotBtn" layoutX="270.0" layoutY="405.0" onAction="#forgotPassword" styleClass="forgot-btn" text="Forgot Password" />
       <Label fx:id="message" layoutX="48.0" layoutY="348.0" prefHeight="18.0" prefWidth="274.0" />
    </children>

@@ -6,11 +6,15 @@
     -fx-background-image: url("../res/test.jpg");
 }
 
-.exit-btn{
-    -fx-background-color: pink;
-    /*transparent;*/
-    /*-fx-background-image: url("res/close.png");*/
+.close-btn{
+    -fx-background-color: #FF1B1B;
+    -fx-background-radius: 5em;
+    -fx-min-width: 15px;
+    -fx-min-height: 15px;
+    -fx-max-width: 15px;
+    -fx-max-height: 15px;
 }
+
 
 .main-lbl{
     -fx-font-size: 18px;

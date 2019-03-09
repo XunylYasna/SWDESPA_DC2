@@ -10,7 +10,7 @@ public class DatabaseConnector {
 
     private final String url = "jdbc:mysql://localhost:3306/gulaplay?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     private final String user = "root";
-    private final String password = "Mionixsargas101!";
+    private final String password = "toor";//"Mionixsargas101!";
 
     public DatabaseConnector(){
         try{

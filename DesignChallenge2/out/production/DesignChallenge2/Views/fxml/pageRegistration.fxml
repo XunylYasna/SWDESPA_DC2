@@ -13,6 +13,6 @@
       <JFXTextField fx:id="emailTf" layoutX="32.0" layoutY="260.0" prefHeight="26.0" prefWidth="330.0" promptText="E-mail" styleClass="tf" />
       <JFXPasswordField fx:id="passwordPf" layoutX="32.0" layoutY="315.0" prefHeight="26.0" prefWidth="330.0" promptText="Password" styleClass="tf" />
       <JFXButton layoutX="384.0" layoutY="401.0" onAction="#register" styleClass="sumbit-btn" text="Register" />
-      <JFXButton fx:id="exitBtn" layoutX="416.0" layoutY="14.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" onAction="#exitProgram" prefHeight="32.0" prefWidth="32.0" styleClass="exit-btn" text="Button" />
+      <JFXButton fx:id="exitBtn" layoutX="416.0" layoutY="14.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" onAction="#exitProgram" prefHeight="32.0" prefWidth="32.0" styleClass="close-btn" text="Button" />
    </children>
 </AnchorPane>

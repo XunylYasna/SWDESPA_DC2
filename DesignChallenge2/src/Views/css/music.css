@@ -10,6 +10,52 @@
     -fx-background-color: #333333;
 }
 
+.usermenu{
+    -fx-background-color: #333333;
+}
+
+.usermenu:showing{
+    -fx-background-color: #262626;
+}
+
+.usermenu .label{
+    -fx-text-fill: white;
+}
+
+.context-menu {
+    -fx-background-color: #333333;
+}
+
+.menu-item{
+    -fx-pref-width: 100px;
+    -fx-background-color: #333333;
+}
+
+.menu-item:hover{
+    -fx-background-color: #262626;
+}
+
+.menu-item:focused, .menu-item:showing{
+    -fx-background-color: #262626;
+}
+
+.menu-item .label{
+    -fx-text-fill: white;
+}
+
+.close-btn{
+    -fx-background-color: #FF1B1B;
+    -fx-background-radius: 5em;
+    -fx-min-width: 10px;
+    -fx-min-height: 10px;
+    -fx-max-width: 10px;
+    -fx-max-height: 10px;
+}
+
+.search-bar{
+    -fx-background-color: #626262;
+}
+
 .side-btn{
     -fx-background-color:transparent;
     /*-fx-background-radius:5px;*/
