@@ -12,7 +12,7 @@ public class LoginHandler extends DatabaseConnector{
 
         //insert query here for boolean values
         String sql = "SELECT * FROM gulaplay.user"; // verify query
-        ResultSet rs = stmt.executeQuery(SQL);
+//        ResultSet rs = stmt.executeQuery(SQL);
         try {
             statement.executeQuery(sql);
         } catch (SQLException e) {
