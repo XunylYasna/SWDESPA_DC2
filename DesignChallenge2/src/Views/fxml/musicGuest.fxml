@@ -15,15 +15,16 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="677.0" prefWidth="937.0" stylesheets="@../css/music.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="677.0" prefWidth="937.0" stylesheets="@../css/music.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.musicGuestController">
   <children>
       <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="900.0" spacing="5.0" styleClass="bottom-bar">
          <children>
             <Pane HBox.hgrow="ALWAYS" />
-            <JFXButton minHeight="20.0" minWidth="20.0" styleClass="close-btn" text="close" />
+            <JFXButton minHeight="20.0" minWidth="20.0" onAction="#exitProgram" styleClass="close-btn" text="close" />
          </children>
          <padding>
             <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
@@ -38,7 +39,6 @@
                         <Font size="28.0" />
                      </font>
                   </Label>
-                  <Pane layoutX="6.0" layoutY="417.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: green;" />
                   <JFXButton layoutX="6.0" layoutY="204.0" prefWidth="215.0" styleClass="side-btn" text="Artist" />
                   <JFXButton layoutX="7.0" layoutY="137.0" prefHeight="34.0" prefWidth="215.0" styleClass="side-btn" text="Songs" />
                   <JFXButton layoutX="6.0" layoutY="170.0" prefHeight="34.0" prefWidth="215.0" styleClass="side-btn" text="Albums" />
@@ -49,11 +49,12 @@
                       <MenuItem mnemonicParsing="false" text="Logout" />
                     </items>
                   </MenuButton>
+                  <MediaView fx:id="videoMv" fitHeight="200.0" fitWidth="200.0" layoutX="8.0" layoutY="438.0" styleClass="vidPlayer" />
           </children>
         </AnchorPane>
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="702.0" prefWidth="824.0">
                <children>
-                  <AnchorPane prefHeight="120.0" prefWidth="716.0" style="-fx-background-color: pink;">
+                  <AnchorPane prefHeight="120.0" prefWidth="722.0" style="-fx-background-color: pink;">
                      <children>
                         <Label layoutX="23.0" layoutY="14.0" text="Now Playing" />
                         <Label layoutX="23.0" layoutY="72.0" text="Album / Playlist" />
@@ -61,15 +62,15 @@
                   </AnchorPane>
                   <AnchorPane layoutY="536.0" prefHeight="93.0" prefWidth="716.0">
                      <children>
-                        <ProgressBar layoutX="75.0" layoutY="64.0" prefHeight="16.0" prefWidth="566.0" progress="0.0" />
-                        <JFXButton layoutX="317.0" layoutY="27.0" text="Play" />
-                        <JFXButton layoutX="249.0" layoutY="27.0" text="Back" />
-                        <JFXButton layoutX="385.0" layoutY="27.0" text="Next" />
+                        <ProgressBar layoutX="75.0" layoutY="64.0" prefHeight="16.0" prefWidth="566.0" progress="0.0" styleClass="song-progressBar" />
+                        <JFXButton id="play-btn" layoutX="317.0" layoutY="27.0" text="Play" />
+                        <JFXButton id="prev-btn" layoutX="249.0" layoutY="27.0" text="Back" />
+                        <JFXButton id="next-btn" layoutX="385.0" layoutY="27.0" text="Next" />
                         <JFXButton layoutX="14.0" layoutY="27.0" text="Shuffle" />
-                        <ProgressBar layoutX="551.0" layoutY="29.0" prefHeight="15.0" prefWidth="150.0" progress="0.0" />
+                        <ProgressBar layoutX="551.0" layoutY="29.0" prefHeight="15.0" prefWidth="150.0" progress="0.0" styleClass="volume-progressBar" />
                      </children>
                   </AnchorPane>
-                  <JFXScrollPane layoutY="120.0" prefHeight="410.0" prefWidth="716.0" />
+                  <JFXScrollPane layoutY="120.0" prefHeight="410.0" prefWidth="722.0" />
                </children>
             </AnchorPane>
       </items>
