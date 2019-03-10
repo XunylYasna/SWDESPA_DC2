@@ -1,30 +1,50 @@
 package Database;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
-public class LoginHandler extends DatabaseConnector{
+public class LoginHandler{
 
+    Connection myConn = DatabaseConnection.getDatabaseConn();
+    Statement statement = null;
+    ResultSet resultSet;
+
+    {
+        try {
+            statement = myConn.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public String verifyCredentials(String username, String password) {
         boolean userExist = false;
         boolean passwordMatch = false;
 
+        int verified = 0;
 
         //insert query here for boolean values
-        String sql = "SELECT * FROM gulaplay.user"; // verify query
-//        ResultSet rs = stmt.executeQuery(SQL);
+        String sql = "SELECT COUNT(username)\n" +
+                "  FROM gulaplay.user\n" +
+                " WHERE UserName = '"+ username +"' AND\n" +
+                "       Password = '"+ password +"'\n" +
+                " LIMIT 0, 1"; // verify query
+
+
         try {
-            statement.executeQuery(sql);
+            resultSet = statement.executeQuery(sql);
+            while(resultSet.next()){
+                verified = Integer.parseInt(resultSet.getString("COUNT(username)"));
+            }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        if(!userExist){
-            return "User does not exit";
-        }
-
-        else if(userExist == true & passwordMatch == false){
-            return "Password incorrect";
+        if(verified == 0){
+            return "Username or Password incorrect";
         }
 
         else{

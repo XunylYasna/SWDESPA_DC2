@@ -15,6 +15,11 @@ public class RegistrationController {
     private JFXButton exitBtn;
 
     @FXML
+    private JFXTextField firstnameTf;
+    @FXML
+    private JFXTextField lastnameTf;
+
+    @FXML
     private JFXTextField usernameTf;
 
     @FXML
@@ -24,11 +29,14 @@ public class RegistrationController {
     private JFXPasswordField passwordPf;
 
     @FXML
+    private Labeled messageLbl;
+
+    @FXML
     void register(ActionEvent event){
         RegistrationHandler regis = new RegistrationHandler();
-        regis.registration(usernameTf.getText(), emailTf.getText(), passwordPf.getText());
-        System.out.println(usernameTf.getText() + " " + emailTf.getText() + " " + passwordPf.getText());
+        String message = regis.registration(firstnameTf.getText(), lastnameTf.getText(), usernameTf.getText(), emailTf.getText(), passwordPf.getText());
 
+        messageLbl.setText(message);
     }
 
     @FXML

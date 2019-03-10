@@ -15,9 +15,9 @@ public class DatabaseConnector {
     public DatabaseConnector(){
         try{
             // Connect to database
-            System.out.println("Connecting to DB...");
             myConn = DriverManager.getConnection(url,user,password);
             statement = myConn.createStatement();
+            System.out.println("Connected to DB!");
 
         }
 

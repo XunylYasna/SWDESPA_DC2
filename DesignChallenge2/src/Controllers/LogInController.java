@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 import java.awt.*;
 import java.io.IOException;
 
-public class LogInController extends LoginHandler{
+public class LogInController{
 
 //    private LoginHandler loginHandler = new LoginHandler();
 
@@ -48,13 +48,15 @@ public class LogInController extends LoginHandler{
 
     @FXML
     void login(ActionEvent event) throws IOException {
+        LoginHandler loginHandler = new LoginHandler();
+
         message.setText("login");
         System.out.println("login");
         System.out.println(usernameTf.getText());
         System.out.println(passwordPf.getText());
-        this.test();
 
-        String status = this.verifyCredentials(usernameTf.getText(), passwordPf.getText());
+
+        String status = loginHandler.verifyCredentials(usernameTf.getText(), passwordPf.getText());
 
         if(status.equals("Log In")){
             Parent root = FXMLLoader.load(getClass().getResource("../Views/fxml/musicGuest.fxml"));
