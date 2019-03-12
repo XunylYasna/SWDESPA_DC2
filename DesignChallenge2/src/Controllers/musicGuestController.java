@@ -30,7 +30,7 @@ public class musicGuestController implements Initializable {
         videoMv.setPreserveRatio(false);
 
         mediaPlayer = new MediaPlayer(dantevid);
-//        mediaPlayer.setMute(true);
+        mediaPlayer.setMute(true);
         mediaPlayer.setAutoPlay(true);
         mediaPlayer.setOnEndOfMedia(new Runnable() {
             @Override

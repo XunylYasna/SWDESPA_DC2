@@ -98,3 +98,43 @@
 .vidPlayer{
     -fx-fill: green;
 }
+
+#musicpane{
+    -fx-background-color: white;
+}
+
+#playerpane{
+    -fx-background-color: white;
+}
+
+.playsong-btn{
+    -fx-background-color: white;
+    -fx-min-width: 28px;
+    -fx-min-height: 28px;
+    -fx-max-width: 28px;
+    -fx-max-height: 28px;
+    -fx-background-radius: 5em;
+}
+
+
+#playerpane{
+    -fx-background-image: url("../res/playerpane.png");
+
+}
+
+
+#play-playerbtn{
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+    -fx-background-radius: 5em;
+}
+
+#prev-playerbtn, #next-playerbtn{
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-background-radius: 5em;
+}
