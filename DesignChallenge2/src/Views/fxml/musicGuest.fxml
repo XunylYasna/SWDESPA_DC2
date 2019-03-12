@@ -58,7 +58,7 @@
                         <Label layoutX="135.0" layoutY="14.0" text="Now Playing" />
                         <Label layoutX="135.0" layoutY="87.0" text="Album / Playlist" />
                         <ImageView fitHeight="116.0" fitWidth="116.0" layoutX="13.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
-                        <JFXButton layoutX="634.0" layoutY="80.0" text="Add Song" />
+                        <JFXButton layoutX="632.0" layoutY="79.0" onAction="#addsongDialog" text="Add Song" />
                      </children>
                   </AnchorPane>
                   <AnchorPane id="playerpane" layoutY="530.0" prefHeight="110.0" prefWidth="722.0">
@@ -88,7 +88,7 @@
                                     <Label layoutX="230.0" layoutY="8.0" text="Artist" />
                                     <Label layoutX="317.0" layoutY="8.0" text="Genre" />
                                     <Label layoutX="416.0" layoutY="8.0" text="Album" />
-                                    <Label layoutX="494.0" layoutY="4.0" text="Date Added:" />
+                                    <Label layoutX="493.0" layoutY="8.0" text="Date Added:" />
                                  </children>
                               </AnchorPane>
                            </children>
