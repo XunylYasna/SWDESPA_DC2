@@ -8,13 +8,14 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="480.0" stylesheets="@../css/start.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.addSongController">
    <children>
       <Label layoutX="42.0" layoutY="42.0" styleClass="main-lbl" text="Add Song" />
-      <JFXTextField fx:id="usernameTf" layoutX="42.0" layoutY="95.0" prefHeight="26.0" prefWidth="330.0" promptText="Song Title" styleClass="tf" stylesheets="@../css/start.css" />
-      <JFXButton fx:id="uploadFBtn" layoutX="248.0" layoutY="418.0" onAction="#uploadSong" styleClass="sumbit-btn" text="Upload File" />
+      <JFXTextField fx:id="titleTf" layoutX="42.0" layoutY="95.0" prefHeight="26.0" prefWidth="330.0" promptText="Song Title" styleClass="tf" stylesheets="@../css/start.css" />
+      <JFXButton fx:id="uploadFBtn" layoutX="198.0" layoutY="303.0" onAction="#uploadSong" styleClass="sumbit-btn" text="Upload File" />
       <Label fx:id="message" layoutX="48.0" layoutY="348.0" prefHeight="18.0" prefWidth="274.0" />
-      <JFXTextField fx:id="usernameTf1" layoutX="42.0" layoutY="141.0" prefHeight="26.0" prefWidth="330.0" promptText="Artist" styleClass="tf" stylesheets="@../css/start.css" />
-      <JFXTextField fx:id="usernameTf11" layoutX="42.0" layoutY="183.0" prefHeight="26.0" prefWidth="330.0" promptText="Album" styleClass="tf" stylesheets="@../css/start.css" />
-      <JFXTextField fx:id="usernameTf111" layoutX="42.0" layoutY="227.0" prefHeight="26.0" prefWidth="330.0" promptText="Genre" styleClass="tf" stylesheets="@../css/start.css" />
+      <JFXTextField fx:id="artistTf" layoutX="42.0" layoutY="141.0" prefHeight="26.0" prefWidth="330.0" promptText="Artist" styleClass="tf" stylesheets="@../css/start.css" />
+      <JFXTextField fx:id="albumTf" layoutX="42.0" layoutY="183.0" prefHeight="26.0" prefWidth="330.0" promptText="Album" styleClass="tf" stylesheets="@../css/start.css" />
+      <JFXTextField fx:id="genreTf" layoutX="42.0" layoutY="227.0" prefHeight="26.0" prefWidth="330.0" promptText="Genre" styleClass="tf" stylesheets="@../css/start.css" />
       <JFXButton fx:id="songCBtn" layoutX="42.0" layoutY="303.0" onAction="#chooseSongCover" prefHeight="150.0" prefWidth="150.0" text="Upload Song Cover" />
-      <JFXButton fx:id="confirmBtn" layoutX="348.0" layoutY="418.0" onAction="#confirm" styleClass="sumbit-btn" text="Confirm" />
+      <JFXButton fx:id="confirmBtn" layoutX="350.0" layoutY="418.0" onAction="#confirm" styleClass="sumbit-btn" text="Confirm" />
+      <Label fx:id="songFileLbl" layoutX="198.0" layoutY="348.0" text="No Song File Selected" />
    </children>
 </AnchorPane>

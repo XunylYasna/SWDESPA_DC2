@@ -20,17 +20,17 @@ public class SongAddHandler {
         }
     }
 
-    public String addSong(String name, String artist, String album, String genre, File photo, File song) {
+    public void addSong(String title, String artist, String genre, String album, File photo, File song) {
 
 //      temp
-        String sql = "INSERT INTO user (firstname, lastname, username, password, email)\n" +
+        String sql = "INSERT INTO song (MusicTitle, Artist, Genre, Album, AlbumCover, SongFile)\n" +
                 "values (?, ?, ?, ?, ?, ?)";// insert insert user query here
         try {
             prepStatement = myConn.prepareStatement(sql);
-            prepStatement.setString(1, name);
+            prepStatement.setString(1, title);
             prepStatement.setString(2, artist);
-            prepStatement.setString(3, album);
-            prepStatement.setString(4, genre);
+            prepStatement.setString(3, genre);
+            prepStatement.setString(4, album );
             FileInputStream input = new FileInputStream(photo);
             prepStatement.setBinaryStream(5,input);
 //            prepStatement.setString(5, input);
@@ -43,9 +43,6 @@ public class SongAddHandler {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-        return "Registration Successful.";
-
 
     }
 }
