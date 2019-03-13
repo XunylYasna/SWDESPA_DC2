@@ -29,6 +29,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import javafx.util.Duration;
 
 import java.awt.*;
@@ -50,7 +51,7 @@ public class musicGuestController implements Initializable {
     ObservableList list = FXCollections.observableArrayList();
 
     @FXML
-    private ListView<String> songlistView;
+    private ListView<Song> songlistView;
 
     private MediaPlayer mediaPlayer;
 
@@ -82,14 +83,24 @@ public class musicGuestController implements Initializable {
         videoMv.setMediaPlayer(mediaPlayer);
 
 //      Song load
-        list.removeAll();
+
+//        for(int i = 0; i < songList.size(); i++){
+//            list.add(songList.get(i).getSongTitle());
+//        }
+//        songlistView.getItems().addAll(list);
+
         songList = songListBuildTemp.getSongs();
+        list.removeAll();
+        list.addAll(songList);
+        songlistView.setItems(list);
 
-        for(int i = 0; i < songList.size(); i++){
-            list.add(songList.get(i).getSongTitle());
-        }
+        songlistView.setCellFactory(new Callback<ListView<Song>, ListCell<Song>>() {
+            @Override
+            public ListCell<Song> call(ListView<Song> param) {
+                return new SongListViewCell();
+            }
+        });
 
-        songlistView.getItems().addAll(list);
 
     }
 
@@ -97,13 +108,13 @@ public class musicGuestController implements Initializable {
 
     @FXML
     public void selectSong(MouseEvent event){
-        String songSelected = songlistView.getSelectionModel().getSelectedItem();
+        Song songSelected = songlistView.getSelectionModel().getSelectedItem();
         if(songSelected == null){
             selectedsongLbl.setText("");
         }
 
         else{
-            selectedsongLbl.setText(songSelected);
+            selectedsongLbl.setText(songSelected.getSongTitle());
         }
     }
 
@@ -126,5 +137,6 @@ public class musicGuestController implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(scene);
         stage.showAndWait();
+//        songlistView.refresh();
     }
 }
