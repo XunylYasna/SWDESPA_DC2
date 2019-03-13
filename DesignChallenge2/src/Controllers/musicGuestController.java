@@ -7,13 +7,22 @@ import com.jfoenix.controls.JFXDialog;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.DoubleProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Labeled;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -36,7 +45,12 @@ public class musicGuestController implements Initializable {
     private MediaView videoMv;
 
     @FXML
-    private ScrollPane scrollPane;
+    private Labeled selectedsongLbl;
+
+    ObservableList list = FXCollections.observableArrayList();
+
+    @FXML
+    private ListView<String> songlistView;
 
     private MediaPlayer mediaPlayer;
 
@@ -49,8 +63,8 @@ public class musicGuestController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        scrollPane.setFitToWidth(true);
 
+//      Side video load
         Media dantevid = new Media(this.getClass().getResource(dantevidURL).toExternalForm());
         videoMv.setPreserveRatio(false);
 
@@ -67,8 +81,31 @@ public class musicGuestController implements Initializable {
 
         videoMv.setMediaPlayer(mediaPlayer);
 
+//      Song load
+        list.removeAll();
         songList = songListBuildTemp.getSongs();
 
+        for(int i = 0; i < songList.size(); i++){
+            list.add(songList.get(i).getSongTitle());
+        }
+
+        songlistView.getItems().addAll(list);
+
+        songlistView.s
+    }
+
+
+
+    @FXML
+    public void selectSong(MouseEvent event){
+        String songSelected = songlistView.getSelectionModel().getSelectedItem();
+        if(songSelected == null){
+            selectedsongLbl.setText("");
+        }
+
+        else{
+            selectedsongLbl.setText(songSelected);
+        }
     }
 
     @FXML

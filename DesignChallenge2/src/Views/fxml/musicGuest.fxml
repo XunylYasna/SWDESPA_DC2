@@ -3,12 +3,12 @@
 <!--<?import com.gluonhq.charm.glisten.control.Avatar?>-->
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -55,7 +55,7 @@
                <children>
                   <AnchorPane id="musicpane" prefHeight="120.0" prefWidth="722.0">
                      <children>
-                        <Label layoutX="135.0" layoutY="14.0" text="Now Playing" />
+                        <Label fx:id="selectedsongLbl" layoutX="135.0" layoutY="14.0" text="Now Playing" />
                         <Label layoutX="135.0" layoutY="87.0" text="Album / Playlist" />
                         <ImageView fitHeight="116.0" fitWidth="116.0" layoutX="13.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
                         <JFXButton layoutX="632.0" layoutY="79.0" onAction="#addsongDialog" text="Add Song" />
@@ -71,30 +71,7 @@
                         <ProgressBar layoutX="551.0" layoutY="29.0" prefHeight="15.0" prefWidth="150.0" progress="0.0" styleClass="volume-progressBar" />
                      </children>
                   </AnchorPane>
-                  <ScrollPane id="music-ScrllPn" fx:id="scrollPane" layoutY="120.0" prefHeight="408.0" prefWidth="722.0">
-                     <content>
-                        <VBox prefHeight="406.0" prefWidth="720.0" styleClass="music-Vbx">
-                           <children>
-                              <AnchorPane prefHeight="35.0" prefWidth="722.0" style="-fx-background-color: gray;">
-                                 <children>
-                                    <JFXButton layoutX="6.0" layoutY="3.0" minWidth="44.0" prefHeight="22.0" prefWidth="44.0" styleClass="playsong-btn" text="Play" />
-                                    <MenuButton layoutX="671.0" layoutY="3.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="29.0" styleClass="usermenu" textFill="WHITE">
-                                       <items>
-                                          <MenuItem mnemonicParsing="false" text="Edit" />
-                                          <MenuItem mnemonicParsing="false" text="Delete" />
-                                       </items>
-                                    </MenuButton>
-                                    <Label layoutX="44.0" layoutY="8.0" text="Song Name" />
-                                    <Label layoutX="230.0" layoutY="8.0" text="Artist" />
-                                    <Label layoutX="317.0" layoutY="8.0" text="Genre" />
-                                    <Label layoutX="416.0" layoutY="8.0" text="Album" />
-                                    <Label layoutX="493.0" layoutY="8.0" text="Date Added:" />
-                                 </children>
-                              </AnchorPane>
-                           </children>
-                        </VBox>
-                     </content>
-                  </ScrollPane>
+                  <JFXListView fx:id="songlistView" layoutY="120.0" onMouseClicked="#selectSong" prefHeight="405.0" prefWidth="722.0" />
                </children>
             </AnchorPane>
       </items>
