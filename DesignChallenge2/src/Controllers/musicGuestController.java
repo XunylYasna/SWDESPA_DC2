@@ -1,5 +1,6 @@
 package Controllers;
 
+import Database.BlobSongGetter;
 import Database.SongListBuildTemp;
 import Model.Song;
 import com.jfoenix.controls.JFXButton;
@@ -19,6 +20,8 @@ import javafx.scene.control.Labeled;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -53,6 +56,9 @@ public class musicGuestController implements Initializable {
     @FXML
     private ListView<Song> songlistView;
 
+    @FXML
+    private ImageView acoverImg;
+
     private MediaPlayer mediaPlayer;
 
     private static final String dantevidURL = "dantevid.mp4";
@@ -60,6 +66,8 @@ public class musicGuestController implements Initializable {
     private SongListBuildTemp songListBuildTemp = new SongListBuildTemp();
     private ArrayList<Song> songList;
 
+
+    BlobSongGetter blobSongGetter = new BlobSongGetter();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -115,6 +123,15 @@ public class musicGuestController implements Initializable {
 
         else{
             selectedsongLbl.setText(songSelected.getSongTitle());
+            Image cover = blobSongGetter.getSongCover(songSelected.getSongID());
+
+            if(cover == null){
+                acoverImg.setImage(null);
+            }
+
+            else{
+                acoverImg.setImage(cover);
+            }
         }
     }
 

@@ -50,7 +50,7 @@ public class addSongController {
         Image cover = new Image(coverFile.toURI().toString());
         BackgroundImage myBI= new BackgroundImage(cover,
                 BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
-                new BackgroundSize(150,150,false,false,false,false));
+                new BackgroundSize(115,115,false,false,false,false));
         songCBtn.setBackground(new Background(myBI));
         songCBtn.setText("");
     }

@@ -57,7 +57,7 @@
                      <children>
                         <Label fx:id="selectedsongLbl" layoutX="135.0" layoutY="14.0" text="Now Playing" />
                         <Label layoutX="135.0" layoutY="87.0" text="Album / Playlist" />
-                        <ImageView fitHeight="116.0" fitWidth="116.0" layoutX="13.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="acoverImg" fitHeight="115.0" fitWidth="115.0" layoutX="13.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
                         <JFXButton layoutX="632.0" layoutY="79.0" onAction="#addsongDialog" text="Add Song" />
                      </children>
                   </AnchorPane>
