@@ -66,6 +66,32 @@ public class BlobSongGetter {
     }
 
 //    private File getSongAudio(int songID){
+//        File songFile = null;
 //
+//        sql = "SELECT SongFile From gulaplay.song WHERE SongID LIKE " + songID;
+//
+//        try {
+//            statement = myConn.createStatement();
+//            resultSet = statement.executeQuery(sql);
+//            byte[] filebytes = null;
+//            while (resultSet.next()){
+//                filebytes = resultSet.getBytes("SongFile");
+//            }
+//            if(filebytes != null){
+//
+//            }
+//                songFile = ImageIO.read(new ByteArrayInputStream(filebytes));
+//
+//        } catch (SQLException e) {
+//            System.out.println("SQL problem" + songID);
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            System.out.println("Conver problem" + songID);
+//            e.printStackTrace();
+//        }
+//
+//
+//
+//        return songFile;
 //    }
 }
