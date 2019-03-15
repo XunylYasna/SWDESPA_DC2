@@ -62,8 +62,8 @@ public class BlobSongGetter {
         return coverImage;
     }
 
-    private File getSongAudio(int songID){
-        String path = "Database/songToPlay.mp3";
+    public File getSongAudio(int songID){
+        String path = "songToPlay.mp3";
         File songFile = null;
 
         sql = "SELECT SongFile From gulaplay.song WHERE SongID LIKE " + songID;

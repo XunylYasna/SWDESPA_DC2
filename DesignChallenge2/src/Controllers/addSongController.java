@@ -1,6 +1,7 @@
 package Controllers;
 
 import Database.SongAddHandler;
+import Model.Song;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -36,16 +37,17 @@ public class addSongController {
     private Labeled songFileLbl;
 
 
-    File coverFile;
-    File songFile;
+    File coverFile = null;
+    File songFile = null;
 
     FileChooser fileChooser = new FileChooser();
 
     SongAddHandler songAddHandler = new SongAddHandler();
 
+    Song songAdded = null;
+
     @FXML
     void chooseSongCover(ActionEvent event){
-        System.out.println("cho");
         coverFile = fileChooser.showOpenDialog(null);
         Image cover = new Image(coverFile.toURI().toString());
         BackgroundImage myBI= new BackgroundImage(cover,
@@ -62,13 +64,15 @@ public class addSongController {
         String genre = genreTf.getText();
         String album = albumTf.getText();
 
-        songAddHandler.addSong(songTitle, artist, album, genre, coverFile, songFile);
+//        if(coverFile == null){
+//            coverFile = new File("defaultCover.png");
+//        }
 
+        songAdded = songAddHandler.addSong(songTitle, artist, album, genre, coverFile, songFile);
     }
 
     @FXML
-    void uploadSong(ActionEvent event){
-        System.out.println("up");
+    void uploadSongFile(ActionEvent event){
         songFile = fileChooser.showOpenDialog(null);
         songFileLbl.setText(songFile.getName());
     }
@@ -76,6 +80,9 @@ public class addSongController {
     @FXML
     void cancel(ActionEvent event) {
         System.out.println("forgot Pass");
+    }
 
+    public Song getSongAdded(){
+        return songAdded;
     }
 }

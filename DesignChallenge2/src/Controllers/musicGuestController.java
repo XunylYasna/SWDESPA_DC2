@@ -3,14 +3,16 @@ package Controllers;
 import Database.BlobSongGetter;
 import Database.SongListBuildTemp;
 import Model.Song;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXSlider;
 import javafx.application.Platform;
-import javafx.beans.binding.Bindings;
-import javafx.beans.property.DoubleProperty;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,14 +21,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Labeled;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -34,14 +32,12 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.util.Duration;
-
-import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.ResourceBundle;
-
-import static com.jfoenix.controls.JFXDialog.DialogTransition.BOTTOM;
 
 public class musicGuestController implements Initializable {
 
@@ -59,13 +55,24 @@ public class musicGuestController implements Initializable {
     @FXML
     private ImageView acoverImg;
 
-    private MediaPlayer mediaPlayer;
+    @FXML
+    private JFXSlider songProgress;
+
+    @FXML
+    private JFXSlider songVolume;
+
 
     private static final String dantevidURL = "dantevid.mp4";
 
     private SongListBuildTemp songListBuildTemp = new SongListBuildTemp();
     private ArrayList<Song> songList;
 
+    private File songAudio;
+    private Song songSelected;
+
+    private MediaPlayer videoPlayer;
+
+    private MediaPlayer audioPlayer;
 
     BlobSongGetter blobSongGetter = new BlobSongGetter();
 
@@ -77,26 +84,20 @@ public class musicGuestController implements Initializable {
         Media dantevid = new Media(this.getClass().getResource(dantevidURL).toExternalForm());
         videoMv.setPreserveRatio(false);
 
-        mediaPlayer = new MediaPlayer(dantevid);
-        mediaPlayer.setMute(true);
-        mediaPlayer.setAutoPlay(true);
-        mediaPlayer.setOnEndOfMedia(new Runnable() {
+        videoPlayer = new MediaPlayer(dantevid);
+        videoPlayer.setMute(true);
+        videoPlayer.setAutoPlay(false);
+        videoPlayer.setOnEndOfMedia(new Runnable() {
             @Override
             public void run() {
-                mediaPlayer.seek(Duration.ZERO);
-                mediaPlayer.play();
+                videoPlayer.seek(Duration.ZERO);
+                videoPlayer.play();
             }
         });
 
-        videoMv.setMediaPlayer(mediaPlayer);
+        videoMv.setMediaPlayer(videoPlayer);
 
 //      Song load
-
-//        for(int i = 0; i < songList.size(); i++){
-//            list.add(songList.get(i).getSongTitle());
-//        }
-//        songlistView.getItems().addAll(list);
-
         songList = songListBuildTemp.getSongs();
         list.removeAll();
         list.addAll(songList);
@@ -110,29 +111,15 @@ public class musicGuestController implements Initializable {
         });
 
 
+
     }
 
 
 
     @FXML
     public void selectSong(MouseEvent event){
-        Song songSelected = songlistView.getSelectionModel().getSelectedItem();
-        if(songSelected == null){
-            selectedsongLbl.setText("");
-        }
-
-        else{
-            selectedsongLbl.setText(songSelected.getSongTitle());
-            Image cover = blobSongGetter.getSongCover(songSelected.getSongID());
-
-            if(cover == null){
-                acoverImg.setImage(null);
-            }
-
-            else{
-                acoverImg.setImage(cover);
-            }
-        }
+        songSelected = songlistView.getSelectionModel().getSelectedItem();
+        refreshSongSelected();
     }
 
     @FXML
@@ -141,8 +128,149 @@ public class musicGuestController implements Initializable {
         System.exit(0);
     }
 
+    void refreshSongSelected(){
+        if(songSelected == null){
+            selectedsongLbl.setText("");
+        }
+        else{
+            selectedsongLbl.setText(songSelected.getSongTitle());
+            Image cover = blobSongGetter.getSongCover(songSelected.getSongID());
+
+            if(cover == null){
+                acoverImg.setImage(null);
+            }
+            else{
+                acoverImg.setImage(cover);
+            }
+
+            playSongInit(songlistView.getSelectionModel().getSelectedIndices().get(0));
+        }
+    }
 
 
+//    Song Playing Related
+    @FXML
+    void playpauseSong(ActionEvent event){
+        if(songSelected != null){
+            if(audioPlayer.getStatus().equals(MediaPlayer.Status.PLAYING)){
+                videoPlayer.pause();
+                audioPlayer.pause();
+            }
+
+            else{
+                audioPlayer.play();
+                videoPlayer.play();
+
+            }
+        }
+
+    }
+
+    @FXML
+    void nextSong(ActionEvent event){
+        ObservableList<Integer> indices = songlistView.getSelectionModel().getSelectedIndices();
+        if(indices.get(0) + 1 < list.size()) {
+            playSongInit(indices.get(0) + 1);
+            songlistView.getSelectionModel().select(indices.get(0) + 1);
+            songSelected = songlistView.getSelectionModel().getSelectedItem();
+            refreshSongSelected();
+        }
+    }
+
+    @FXML
+    void prevSong(ActionEvent event){
+        ObservableList<Integer> indices = songlistView.getSelectionModel().getSelectedIndices();
+        if(indices.get(0) - 1 != -1){
+            playSongInit(indices.get(0) -1);
+            songlistView.getSelectionModel().select(indices.get(0)-1);
+            songSelected = songlistView.getSelectionModel().getSelectedItem();
+            refreshSongSelected();
+        }
+    }
+
+    void playSongInit(int songPosition){
+
+        songAudio = blobSongGetter.getSongAudio(songList.get(songPosition).getSongID());
+        if(songAudio == null){
+            if(audioPlayer != null){
+                audioPlayer.dispose();
+            }
+        }
+
+        else{
+            if(audioPlayer != null){
+                audioPlayer.dispose();
+            }
+            Media songMedia = new Media(songAudio.toURI().toString());
+            audioPlayer = new MediaPlayer(songMedia);
+
+            audioPlayer.setOnReady(new Runnable() {
+                @Override
+                public void run() {
+
+//                    System.out.println("Duration: "+songMedia.getDuration().toSeconds());
+//
+//                    // display media's metadata
+//                    for (Map.Entry<String, Object> entry : songMedia.getMetadata().entrySet()){
+//                        System.out.println(entry.getKey() + ": " + entry.getValue());
+//                    }
+//
+//                    // play if you want
+
+                    audioPlayer.play();
+                    songProgress.setMax(songMedia.getDuration().toSeconds());
+                    System.out.println(audioPlayer.getTotalDuration().toSeconds());
+                    audioPlayer.play();
+                    videoPlayer.play();
+                }
+            });
+
+        }
+
+        audioPlayer.currentTimeProperty().addListener(new ChangeListener<Duration>() {
+            @Override
+            public void changed(ObservableValue<? extends Duration> observable, Duration oldValue,
+                                Duration newValue) {
+                songProgress.setValue(newValue.toSeconds());
+            }
+        });
+
+        songProgress.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                audioPlayer.pause();
+                audioPlayer.seek(Duration.seconds(songProgress.getValue()));
+                audioPlayer.play();
+
+            }
+        });
+
+        songProgress.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                audioPlayer.pause();
+                audioPlayer.seek(Duration.seconds(songProgress.getValue()));
+                audioPlayer.play();
+
+            }
+        });
+
+        songVolume.setValue(audioPlayer.getVolume() * 100);
+
+        songVolume.valueProperty().addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                audioPlayer.setVolume(songVolume.getValue()/100);
+            }
+        });
+
+
+    }
+
+
+
+
+//    Adding Song
     @FXML
     void addsongDialog(ActionEvent event) throws IOException {
         Stage stage = new Stage();
@@ -154,6 +282,18 @@ public class musicGuestController implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(scene);
         stage.showAndWait();
-//        songlistView.refresh();
+
+        addSongController addSongController = new addSongController();
+
+        if(addSongController.getSongAdded() != null){
+            list.add(addSongController.getSongAdded());
+            refreshListView();
+        }
+    }
+
+    void refreshListView(){
+        songlistView.refresh();
+        songlistView.getItems().removeAll();
+        songlistView.getItems().addAll(list);
     }
 }

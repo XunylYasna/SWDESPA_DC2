@@ -1,5 +1,7 @@
 package Database;
 
+import Model.Song;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -20,9 +22,10 @@ public class SongAddHandler {
         }
     }
 
-    public void addSong(String title, String artist, String genre, String album, File photo, File song) {
+    public Song addSong(String title, String artist, String genre, String album, File photo, File song) {
 
 //      temp
+        FileInputStream input;
         String sql = "INSERT INTO song (MusicTitle, Artist, Genre, Album, AlbumCover, SongFile)\n" +
                 "values (?, ?, ?, ?, ?, ?)";// insert insert user query here
         try {
@@ -31,18 +34,49 @@ public class SongAddHandler {
             prepStatement.setString(2, artist);
             prepStatement.setString(3, genre);
             prepStatement.setString(4, album );
-            FileInputStream input = new FileInputStream(photo);
-            prepStatement.setBinaryStream(5,input);
-//            prepStatement.setString(5, input);
-            input = new FileInputStream(song);
-            prepStatement.setBinaryStream(6,input);
-//            prepStatement.setString(6, songlocation);
+            if(photo != null){
+                 input = new FileInputStream(photo);
+                prepStatement.setBinaryStream(5,input);
+            }
+            else{
+                prepStatement.setBinaryStream(5,null);
+            }
+            if(song != null){
+                input = new FileInputStream(song);
+                prepStatement.setBinaryStream(6,input);
+            }
+            else{
+                prepStatement.setBinaryStream(6,null);
+            }
             prepStatement.execute();
+
+            sql = "Select * from song where SongID=LAST_INSERT_ID();";
+            statement = myConn.createStatement();
+            resultSet = statement.executeQuery(sql);
+
+            int songID = 0;
+            String newSongTitle = "error";
+            String newArtist = "error";
+            String newAlbum = "error";
+            String newGenre = "error";
+
+            while (resultSet.next()){
+                songID = resultSet.getInt("SongID");
+                newSongTitle = resultSet.getString("MusicTitle");
+                newArtist = resultSet.getString("Artist");
+                newAlbum = resultSet.getString("Genre");
+                newGenre = resultSet.getString("Album");
+            }
+
+
+            return new Song(songID, newSongTitle,newArtist, newAlbum, newGenre);
+
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
+        return null;
     }
 }

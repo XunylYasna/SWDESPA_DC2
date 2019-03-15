@@ -4,11 +4,11 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXSlider?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -63,12 +63,12 @@
                   </AnchorPane>
                   <AnchorPane id="playerpane" layoutY="530.0" prefHeight="110.0" prefWidth="722.0">
                      <children>
-                        <ProgressBar layoutX="78.0" layoutY="80.0" prefHeight="16.0" prefWidth="566.0" progress="0.0" styleClass="song-progressBar" />
-                        <JFXButton id="play-playerbtn" layoutX="349.0" layoutY="24.0" text="Play" />
-                        <JFXButton id="prev-playerbtn" layoutX="248.0" layoutY="29.0" text="Back" />
-                        <JFXButton id="next-playerbtn" layoutX="461.0" layoutY="29.0" text="Next" />
+                        <JFXButton id="play-playerbtn" layoutX="341.0" layoutY="24.0" onAction="#playpauseSong" text="Play" />
+                        <JFXButton id="prev-playerbtn" layoutX="251.0" layoutY="40.0" onAction="#prevSong" text="Back" />
+                        <JFXButton id="next-playerbtn" layoutX="443.0" layoutY="43.0" onAction="#nextSong" text="Next" />
                         <JFXButton id="shuffle-playerbtn" layoutX="14.0" layoutY="27.0" text="Shuffle" />
-                        <ProgressBar layoutX="551.0" layoutY="29.0" prefHeight="15.0" prefWidth="150.0" progress="0.0" styleClass="volume-progressBar" />
+                        <JFXSlider fx:id="songVolume" layoutX="568.0" layoutY="15.0" />
+                        <JFXSlider fx:id="songProgress" layoutX="-4.0" layoutY="73.0" prefHeight="24.0" prefWidth="726.0" />
                      </children>
                   </AnchorPane>
                   <JFXListView fx:id="songlistView" layoutY="120.0" onMouseClicked="#selectSong" prefHeight="405.0" prefWidth="722.0" />

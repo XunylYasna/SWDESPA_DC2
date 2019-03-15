@@ -9,7 +9,7 @@
    <children>
       <Label layoutX="42.0" layoutY="42.0" styleClass="main-lbl" text="Add Song" />
       <JFXTextField fx:id="titleTf" layoutX="42.0" layoutY="95.0" prefHeight="26.0" prefWidth="330.0" promptText="Song Title" styleClass="tf" stylesheets="@../css/start.css" />
-      <JFXButton fx:id="uploadFBtn" layoutX="198.0" layoutY="303.0" onAction="#uploadSong" styleClass="sumbit-btn" text="Upload File" />
+      <JFXButton fx:id="uploadFBtn" layoutX="198.0" layoutY="303.0" onAction="#uploadSongFile" styleClass="sumbit-btn" text="Upload File" />
       <Label fx:id="message" layoutX="48.0" layoutY="348.0" prefHeight="18.0" prefWidth="274.0" />
       <JFXTextField fx:id="artistTf" layoutX="42.0" layoutY="141.0" prefHeight="26.0" prefWidth="330.0" promptText="Artist" styleClass="tf" stylesheets="@../css/start.css" />
       <JFXTextField fx:id="albumTf" layoutX="42.0" layoutY="183.0" prefHeight="26.0" prefWidth="330.0" promptText="Album" styleClass="tf" stylesheets="@../css/start.css" />
