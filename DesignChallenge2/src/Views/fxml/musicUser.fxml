@@ -3,125 +3,95 @@
 <!--<?import com.gluonhq.charm.glisten.control.Avatar?>-->
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXSlider?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="677.0" prefWidth="937.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
-  <children>
-    <MenuBar prefHeight="0.0" prefWidth="938.0" VBox.vgrow="NEVER">
-      <menus>
-        <Menu mnemonicParsing="false" styleClass="top-item" text="File">
-          <items>
-            <MenuItem mnemonicParsing="false" text="New" />
-            <MenuItem mnemonicParsing="false" text="Open…" />
-            <Menu mnemonicParsing="false" text="Open Recent" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Close" />
-            <MenuItem mnemonicParsing="false" text="Save" />
-            <MenuItem mnemonicParsing="false" text="Save As…" />
-            <MenuItem mnemonicParsing="false" text="Revert" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Preferences…" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Quit" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" styleClass="top-item" text="Edit">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Undo" />
-            <MenuItem mnemonicParsing="false" text="Redo" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Cut" />
-            <MenuItem mnemonicParsing="false" text="Copy" />
-            <MenuItem mnemonicParsing="false" text="Paste" />
-            <MenuItem mnemonicParsing="false" text="Delete" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Select All" />
-            <MenuItem mnemonicParsing="false" text="Unselect All" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" styleClass="top-item" text="Help">
-          <items>
-            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
-          </items>
-        </Menu>
-      </menus>
-    </MenuBar>
-    <SplitPane dividerPositions="0.23051224944320714" focusTraversable="true" prefHeight="614.0" prefWidth="934.0" VBox.vgrow="ALWAYS">
-      <items>
-        <AnchorPane>
-          <children>
-                  <Avatar layoutX="14.0" layoutY="14.0" style="-fx-background-color: black;" />
-                  <Label layoutX="58.0" layoutY="24.0" text="User" />
-                  <Pane layoutX="6.0" layoutY="417.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: green;" />
-                  <Label layoutX="16.0" layoutY="222.0" text="Playlists" />
-                  <Button layoutX="14.0" layoutY="68.0" mnemonicParsing="false" text="Songs" />
-                  <Button layoutX="15.0" layoutY="117.0" mnemonicParsing="false" text="Albums" />
-                  <JFXButton layoutX="15.0" layoutY="166.0" text="Artist" />
-                  <ScrollPane layoutX="6.0" layoutY="240.0" prefHeight="200.0" prefWidth="200.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-                    </content>
-                  </ScrollPane>
-          </children>
-        </AnchorPane>
-            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="702.0" prefWidth="824.0">
-               <children>
-                  <AnchorPane prefHeight="120.0" prefWidth="716.0" style="-fx-background-color: pink;">
-                     <children>
-                        <Label layoutX="23.0" layoutY="14.0" text="Now Playing" />
-                        <Label layoutX="23.0" layoutY="72.0" text="Album / Playlist" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutY="536.0" prefHeight="93.0" prefWidth="716.0">
-                     <children>
-                        <ProgressBar layoutX="75.0" layoutY="64.0" prefHeight="16.0" prefWidth="566.0" progress="0.0" />
-                        <JFXButton layoutX="317.0" layoutY="27.0" text="Play" />
-                        <JFXButton layoutX="249.0" layoutY="27.0" text="Back" />
-                        <JFXButton layoutX="385.0" layoutY="27.0" text="Next" />
-                        <JFXButton layoutX="14.0" layoutY="27.0" text="Shuffle" />
-                        <ProgressBar layoutX="551.0" layoutY="19.0" prefHeight="15.0" prefWidth="150.0" progress="0.0" />
-                     </children>
-                  </AnchorPane>
-                  <JFXScrollPane layoutY="120.0" prefHeight="410.0" prefWidth="716.0">
-                     <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0" />
-                     </children></JFXScrollPane>
-               </children>
-            </AnchorPane>
-      </items>
-    </SplitPane>
-    <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="900.0" spacing="5.0" VBox.vgrow="NEVER">
-      <children>
-        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="GulaPlay©" HBox.hgrow="ALWAYS">
-          <font>
-            <Font size="11.0" fx:id="x3" />
-          </font>
-          <textFill>
-            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
-          </textFill>
-        </Label>
-        <Pane prefHeight="2.0" prefWidth="765.0" HBox.hgrow="ALWAYS" />
-        <Label font="$x3" maxWidth="-1.0" text="Version BETA " textFill="$x4" HBox.hgrow="NEVER" />
-      </children>
-      <padding>
-        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-      </padding>
-    </HBox>
-  </children>
+<VBox prefHeight="677.0" prefWidth="937.0" stylesheets="@../css/music.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.musicUserController">
+    <children>
+        <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="900.0" spacing="5.0" styleClass="bottom-bar">
+            <children>
+                <Pane HBox.hgrow="ALWAYS" />
+                <JFXButton minHeight="20.0" minWidth="20.0" onAction="#exitProgram" styleClass="close-btn" text="close" />
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+        </HBox>
+        <SplitPane dividerPositions="0.23086789226165028" focusTraversable="true" prefHeight="614.0" prefWidth="934.0" VBox.vgrow="ALWAYS">
+            <items>
+                <AnchorPane styleClass="sidepane">
+                    <children>
+                        <Label layoutX="16.0" prefHeight="40.0" prefWidth="150.0" styleClass="title" text="Gulaplay" textFill="WHITE">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                        <JFXButton layoutX="8.0" layoutY="177.0" prefHeight="40.0" prefWidth="215.0" styleClass="side-btn" text="Artist" />
+                        <JFXButton layoutX="8.0" layoutY="97.0" prefHeight="40.0" prefWidth="215.0" styleClass="side-btn" text="Songs" />
+                        <JFXButton layoutX="8.0" layoutY="137.0" prefHeight="40.0" prefWidth="215.0" styleClass="side-btn" text="Albums" />
+                        <JFXButton layoutX="10.0" layoutY="217.0" prefHeight="40.0" prefWidth="215.0" styleClass="side-btn" text="Genre" />
+                        <MenuButton layoutX="18.0" layoutY="59.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="183.0" styleClass="usermenu" text="&lt;User&gt;" textFill="WHITE">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Logout" />
+                            </items>
+                        </MenuButton>
+                        <MediaView fx:id="videoMv" fitHeight="200.0" fitWidth="200.0" layoutX="8.0" layoutY="438.0" styleClass="vidPlayer" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="702.0" prefWidth="824.0">
+                    <children>
+                        <AnchorPane id="musicpane" prefHeight="120.0" prefWidth="722.0">
+                            <children>
+                                <Label fx:id="selectedsongLbl" layoutX="135.0" layoutY="14.0" text="Now Playing" />
+                                <Label layoutX="135.0" layoutY="87.0" text="Album / Playlist" />
+                                <ImageView fx:id="acoverImg" fitHeight="115.0" fitWidth="115.0" layoutX="13.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+                                <JFXButton layoutX="632.0" layoutY="79.0" onAction="#addsongDialog" text="Add Song" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane id="playerpane" layoutY="530.0" prefHeight="110.0" prefWidth="722.0">
+                            <children>
+                                <JFXButton id="play-playerbtn" layoutX="341.0" layoutY="24.0" onAction="#playpauseSong" text="Play" />
+                                <JFXButton id="prev-playerbtn" layoutX="251.0" layoutY="40.0" onAction="#prevSong" text="Back" />
+                                <JFXButton id="next-playerbtn" layoutX="443.0" layoutY="43.0" onAction="#nextSong" text="Next" />
+                                <JFXButton id="shuffle-playerbtn" layoutX="14.0" layoutY="27.0" text="Shuffle" />
+                                <JFXSlider fx:id="songVolume" layoutX="568.0" layoutY="15.0" />
+                                <JFXSlider fx:id="songProgress" layoutX="-4.0" layoutY="73.0" prefHeight="24.0" prefWidth="726.0" />
+                            </children>
+                        </AnchorPane>
+                        <JFXListView fx:id="songlistView" layoutY="120.0" onMouseClicked="#selectSong" prefHeight="405.0" prefWidth="722.0" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="900.0" spacing="5.0" styleClass="bottom-bar" VBox.vgrow="NEVER">
+            <children>
+                <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="GulaPlay©" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="11.0" fx:id="x3" />
+                    </font>
+                    <textFill>
+                        <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+                    </textFill>
+                </Label>
+                <Pane prefHeight="2.0" prefWidth="765.0" HBox.hgrow="ALWAYS" />
+                <Label font="$x3" maxWidth="-1.0" text="Version BETA " textFill="$x4" HBox.hgrow="NEVER" />
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+        </HBox>
+    </children>
 </VBox>

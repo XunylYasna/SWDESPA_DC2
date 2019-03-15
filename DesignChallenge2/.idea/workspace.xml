@@ -2,39 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="165670e9-b38b-4b12-8d84-e4c4350d5229" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/Builder/UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/Builder/UserBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/LogInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/LogInController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/SongListViewCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/SongListViewCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/StartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/StartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/addSongController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/addSongController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/dantevid.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController$8.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/BlobSongGetter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/BlobSongGetter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/DatabaseConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/LoginHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/LoginHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/RegistrationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/RegistrationHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/SongAddHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/SongAddHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/SongListBuildTemp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/SongListBuildTemp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/UserBuildTemp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/UserBuildTemp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/MusicList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/MusicList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/MusicPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/MusicPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/Song.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Views/fxml/musicGuest.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Views/fxml/musicGuest.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Views/fxml/musicUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Views/fxml/musicUser.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songToPlay.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/songToPlay.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/LogInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/dantevid.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/FacadePackages/dantevid.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/musicGuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/musicGuestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GulaplayDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../GulaplayDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/musicUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/musicUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/fxml/musicGuest.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/fxml/musicGuest.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/fxml/musicUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/fxml/musicUser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/fxml/songCell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/fxml/songCell.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,30 +36,35 @@
     <session id="-2139555795">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="4" />
+          <entry key="fxml" value="2" />
+          <entry key="java" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="4" />
+          <entry key="JAVA" value="18" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="312" />
+          <entry key="fxml" value="4" />
+          <entry key="java" value="1952" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="312" />
+          <entry key="JAVA" value="1952" />
+          <entry key="XML" value="4" />
         </counts>
       </usages-collector>
     </session>
@@ -78,51 +72,99 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/musicGuestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="311" selection-end-column="5" />
+            <state relative-caret-position="-935">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="31" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8062#8063#0" expanded="true" />
-                <element signature="e#8098#8099#0" expanded="true" />
+                <element signature="e#4083#4084#0" expanded="true" />
+                <element signature="e#4132#4133#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/addSongController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="70" column="97" lean-forward="true" selection-start-line="70" selection-start-column="97" selection-end-line="70" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/LogInController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="66" column="14" selection-start-line="66" selection-start-column="14" selection-end-line="67" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerTop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerMiddle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2389#2390#0" expanded="true" />
+                <element signature="e#2423#2424#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerBottom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="142" column="31" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4759#4760#0" expanded="true" />
+                <element signature="e#4839#4840#0" expanded="true" />
+                <element signature="e#4648#4649#0" expanded="true" />
+                <element signature="e#4694#4695#0" expanded="true" />
+                <element signature="e#4747#4748#0" expanded="true" />
+                <element signature="e#4802#4803#0" expanded="true" />
+                <element signature="e#4854#4855#0" expanded="true" />
+                <element signature="e#4874#4875#0" expanded="true" />
+                <element signature="e#4957#4958#0" expanded="true" />
+                <element signature="e#5026#5027#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/musicUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            <state relative-caret-position="161">
+              <caret line="40" column="45" selection-end-line="319" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/SongAddHandler.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/StartController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/DatabaseConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+            <state relative-caret-position="378">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
             </state>
           </provider>
         </entry>
@@ -148,8 +190,14 @@
         <option value="$PROJECT_DIR$/src/Controllers/addSongController.java" />
         <option value="$PROJECT_DIR$/src/Model/Main.java" />
         <option value="$PROJECT_DIR$/src/Database/DatabaseConnection.java" />
-        <option value="$PROJECT_DIR$/src/Controllers/musicGuestController.java" />
+        <option value="$PROJECT_DIR$/src/Views/fxml/musicUser.fxml" />
+        <option value="$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayer.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerTop.java" />
         <option value="$PROJECT_DIR$/src/Controllers/musicUserController.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/LogInController.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerBottom.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerMiddle.java" />
+        <option value="$PROJECT_DIR$/src/Controllers/musicGuestController.java" />
       </list>
     </option>
   </component>
@@ -165,11 +213,16 @@
     <option name="width" value="930" />
     <option name="height" value="735" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,6 +245,13 @@
               <item name="DesignChallenge2" type="b2602c69:ProjectViewProjectNode" />
               <item name="DesignChallenge2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="FacadePackages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DesignChallenge2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DesignChallenge2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -200,19 +260,30 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DesignChallenge2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DesignChallenge2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DesignChallenge2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DesignChallenge2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552630344634" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552665752871" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controllers/Builder" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -220,6 +291,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lynux\Desktop\DC2\DesignChallenge2\src\Controllers\FacadePackages" />
       <recent name="C:\Users\Lynux\Desktop\DC2\DesignChallenge2\src\Controllers\" />
       <recent name="C:\Users\Lynux\Desktop\DC2\DesignChallenge2\src\Controllers\Builder" />
     </key>
@@ -273,11 +345,12 @@
       <workItem from="1552616438642" duration="891000" />
       <workItem from="1552619236541" duration="107000" />
       <workItem from="1552626057271" duration="3770000" />
+      <workItem from="1552646183054" duration="12746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26779000" />
+    <option name="totallyTimeSpent" value="39525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -287,7 +360,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.2590604" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -322,20 +395,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../../jaco-mp3-player-0.9.3/examples/Example1.java" />
-    <entry file="file://$PROJECT_DIR$/src/Controllers/StartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/addSongController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Database/SongListBuildTemp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -364,13 +423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -380,27 +432,130 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Database/SongAddHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="1105">
           <caret line="70" selection-start-line="70" selection-end-line="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/musicGuestController.java">
+    <entry file="file://$PROJECT_DIR$/src/Database/DatabaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="311" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8062#8063#0" expanded="true" />
-            <element signature="e#8098#8099#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/fxml/musicUser.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/fxml/musicGuest.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="29" selection-end-line="101" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/musicUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        <state relative-caret-position="161">
+          <caret line="40" column="45" selection-end-line="319" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/LogInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="66" column="14" selection-start-line="66" selection-start-column="14" selection-end-line="67" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerBottom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="142" column="31" selection-start-line="142" selection-start-column="31" selection-end-line="142" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4759#4760#0" expanded="true" />
+            <element signature="e#4839#4840#0" expanded="true" />
+            <element signature="e#4648#4649#0" expanded="true" />
+            <element signature="e#4694#4695#0" expanded="true" />
+            <element signature="e#4747#4748#0" expanded="true" />
+            <element signature="e#4802#4803#0" expanded="true" />
+            <element signature="e#4854#4855#0" expanded="true" />
+            <element signature="e#4874#4875#0" expanded="true" />
+            <element signature="e#4957#4958#0" expanded="true" />
+            <element signature="e#5026#5027#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerTop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerMiddle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2389#2390#0" expanded="true" />
+            <element signature="e#2423#2424#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/addSongController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="70" column="97" lean-forward="true" selection-start-line="70" selection-start-column="97" selection-end-line="70" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/musicGuestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-935">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="31" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4083#4084#0" expanded="true" />
+            <element signature="e#4132#4133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/StartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>

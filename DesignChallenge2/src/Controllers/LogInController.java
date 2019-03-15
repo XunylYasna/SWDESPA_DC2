@@ -39,6 +39,7 @@ public class LogInController{
     @FXML
     private Labeled message;
 
+    private String username;
 
     @FXML
     void exitProgram(ActionEvent event) {
@@ -59,9 +60,14 @@ public class LogInController{
         String status = loginHandler.verifyCredentials(usernameTf.getText(), passwordPf.getText());
 
         if(status.equals("Log In")){
-            Parent root = FXMLLoader.load(getClass().getResource("../Views/fxml/musicGuest.fxml"));
-            Scene scene = new Scene(root);
+            username = usernameTf.getText();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Views/fxml/musicUser.fxml"));
+            Parent root = fxmlLoader.load();
 
+//            musicUserController musicUserController = (musicUserController) fxmlLoader.getController();
+//            musicUserController.setUsername(username);
+
+            Scene scene = new Scene(root);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();
@@ -78,5 +84,9 @@ public class LogInController{
     void forgotPassword(ActionEvent event) {
         System.out.println("forgot Pass");
         message.setText("Tangina ka bahala ka sa buhay mo");
+    }
+
+    String getUsername(){
+        return username;
     }
 }
