@@ -110,7 +110,10 @@ public class musicGuestController implements Initializable {
             }
         });
 
+//      Volume and song slider init
 
+        songVolume.setValue(100.0);
+        songProgress.setValue(0.0);
 
     }
 
@@ -160,7 +163,6 @@ public class musicGuestController implements Initializable {
             else{
                 audioPlayer.play();
                 videoPlayer.play();
-
             }
         }
 
@@ -264,6 +266,13 @@ public class musicGuestController implements Initializable {
             }
         });
 
+        audioPlayer.setOnEndOfMedia(new Runnable() {
+            @Override
+            public void run() {
+                nextSong(null);
+            }
+        });
+
 
     }
 
@@ -276,24 +285,29 @@ public class musicGuestController implements Initializable {
         Stage stage = new Stage();
         Parent root;
 
-        root = FXMLLoader.load(getClass().getResource("../Views/fxml/addSong.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Views/fxml/addSong.fxml"));
+        root = fxmlLoader.load();
 
         Scene scene = new Scene(root);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(scene);
+        addSongController newaddSongController = (addSongController) fxmlLoader.getController();
         stage.showAndWait();
 
-        addSongController addSongController = new addSongController();
 
-        if(addSongController.getSongAdded() != null){
-            list.add(addSongController.getSongAdded());
+        if(newaddSongController.getSongAdded() != null){
+            list.add(newaddSongController.getSongAdded());
+            songList.add(newaddSongController.getSongAdded());
             refreshListView();
         }
+
     }
 
     void refreshListView(){
         songlistView.refresh();
         songlistView.getItems().removeAll();
-        songlistView.getItems().addAll(list);
+        songlistView.setItems(list);
+
+
     }
 }
