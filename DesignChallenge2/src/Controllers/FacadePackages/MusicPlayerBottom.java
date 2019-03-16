@@ -32,13 +32,14 @@ public class MusicPlayerBottom {
     private static final String dantevidURL = "dantevid.mp4";
 
     MusicPlayerMiddle musicPlayerMiddle;
-    BlobSongGetter blobSongGetter = new BlobSongGetter();
+    BlobSongGetter blobSongGetter;
 
-    public MusicPlayerBottom(JFXSlider songProgress, JFXSlider songVolume, MediaView videoMv, MusicPlayerMiddle musicPlayerMiddle) {
+    public MusicPlayerBottom(JFXSlider songProgress, JFXSlider songVolume, MediaView videoMv, MusicPlayerMiddle musicPlayerMiddle, BlobSongGetter blobSongGetter) {
         this.songProgress = songProgress;
         this.songVolume = songVolume;
         this.videoMv = videoMv;
         this.musicPlayerMiddle = musicPlayerMiddle;
+        this.blobSongGetter = blobSongGetter;
     }
 
     public void initialize(){
@@ -62,19 +63,7 @@ public class MusicPlayerBottom {
         songProgress.setValue(0.0);
     }
 
-    public void playPauseSong(){
-        if(audioPlayer.getStatus().equals(MediaPlayer.Status.PLAYING)){
-            videoPlayer.pause();
-            audioPlayer.pause();
-        }
-
-        else{
-            audioPlayer.play();
-            videoPlayer.play();
-        }
-    }
-
-    public void songInit(int songID){
+    public Song songInit(int songID){
         File songAudio = blobSongGetter.getSongAudio(songID);
         if(songAudio == null){
             if(audioPlayer != null){
@@ -143,17 +132,44 @@ public class MusicPlayerBottom {
                 playNextSong();
             }
         });
+
+        return musicPlayerMiddle.getSongselected();
     }
 
-    public void playSongInit(){
-        songInit(musicPlayerMiddle.getSongselected().getSongID());
+    public Song playSongInit(){
+        return songInit(musicPlayerMiddle.getSongselected().getSongID());
     }
 
-    public void playNextSong() {
-        songInit(musicPlayerMiddle.getNextSong().getSongID());
+    public void playPauseSong(){
+        if(audioPlayer.getStatus().equals(MediaPlayer.Status.PLAYING)){
+            videoPlayer.pause();
+            audioPlayer.pause();
+        }
+
+        else{
+            audioPlayer.play();
+            videoPlayer.play();
+        }
     }
 
-    public void playPrevSong() {
-        songInit(musicPlayerMiddle.getPrevSong().getSongID());
+    public Song playNextSong() {
+        Song song = musicPlayerMiddle.getNextSong();
+
+        if(song == null){
+            audioPlayer.dispose();
+            return null;
+        }
+        return songInit(song.getSongID());
+    }
+
+    public Song playPrevSong() {
+        Song song = musicPlayerMiddle.getPrevSong();
+
+        if(song == null){
+            audioPlayer.dispose();
+            return null;
+        }
+
+        return songInit(song.getSongID());
     }
 }

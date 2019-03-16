@@ -11,16 +11,21 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Labeled;
 import javafx.scene.control.ListView;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.MediaView;
+import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,9 +34,8 @@ import java.util.ResourceBundle;
 public class musicGuestController implements Initializable {
 
 
-    private Song songSelected;
 
-//    Music Player Top UI
+    //    Music Player Top UI
     @FXML
     private Labeled selectedTitleLbl;
     @FXML
@@ -45,11 +49,11 @@ public class musicGuestController implements Initializable {
     @FXML
     private ImageView acoverImg;
 
-//    Music Player Middle UI
+    //    Music Player Middle UI
     @FXML
     private ListView<Song> songlistView;
 
-//    Music Player Bottom UI
+    //    Music Player Bottom UI
     @FXML
     private JFXSlider songProgress;
     @FXML
@@ -57,22 +61,43 @@ public class musicGuestController implements Initializable {
     @FXML
     private MediaView videoMv;
 
-    BlobSongGetter blobSongGetter = new BlobSongGetter();
+//    Music Player Side UI
+    @FXML
+    private MenuButton userMenu;
+    @FXML
+    private MenuItem accountItem;
 
-//    Packages
+
+    //    Packages
     MusicPlayerTop musicPlayerTop;
     MusicPlayerBottom musicPlayerBottom;
     MusicPlayerMiddle musicPlayerMiddle;
+
+//    Song passing
+    BlobSongGetter blobSongGetter = new BlobSongGetter();
+    private Song songSelected;
+
+//    User passing
+    String username = null;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         musicPlayerTop = new MusicPlayerTop(selectedTitleLbl,selectedArtistLbl,selectedGenreLbl,selectedAlbumLbl,selectedFromLbl,acoverImg);
         musicPlayerMiddle = new MusicPlayerMiddle(songlistView);
-        musicPlayerBottom = new MusicPlayerBottom(songProgress,songVolume,videoMv, musicPlayerMiddle);
+        musicPlayerBottom = new MusicPlayerBottom(songProgress,songVolume,videoMv, musicPlayerMiddle, blobSongGetter);
 
         musicPlayerBottom.initialize();
-        musicPlayerMiddle.initialize();
+        musicPlayerMiddle.initialize(username);
+
+        if(username != null){
+            userMenu.setText(username);
+        }
+
+        else{
+            userMenu.setText("Guest Gulapa");
+            accountItem.setDisable(true);
+        }
 
     }
 
@@ -109,17 +134,15 @@ public class musicGuestController implements Initializable {
 
     @FXML
     void nextSong(ActionEvent event){
-        musicPlayerBottom.playNextSong();
+        songSelected = musicPlayerBottom.playNextSong();
         refreshSongSelected();
     }
 
     @FXML
     void prevSong(ActionEvent event){
-        musicPlayerBottom.playPrevSong();
+        songSelected = musicPlayerBottom.playPrevSong();
         refreshSongSelected();
     }
-
-
 
 
 //    Adding Song
@@ -140,6 +163,29 @@ public class musicGuestController implements Initializable {
         if(newaddSongController.getSongAdded() != null){
             musicPlayerMiddle.addnewSong(newaddSongController.getSongAdded());
         }
-
     }
+
+//    User Related
+    public void setUsername(String username){
+        System.out.println(username);
+        this.username = username;
+        userMenu.setText(username);
+    }
+
+    @FXML
+    void logout(ActionEvent event) throws IOException {
+//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Views/fxml/mainStart.fxml"));
+//        Parent root = (Parent) fxmlLoader.load();
+//        Scene scene = new Scene(root);
+//        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+//        window.setScene(scene);
+//        window.show();
+        Parent root = FXMLLoader.load(getClass().getResource("../Views/fxml/mainStart.fxml"));
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+        Stage stage = (Stage)((Node)userMenu).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }

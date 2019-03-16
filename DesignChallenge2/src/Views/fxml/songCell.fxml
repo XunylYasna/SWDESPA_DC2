@@ -17,8 +17,8 @@
       <Label fx:id="cellGenreLbl" prefHeight="30.0" prefWidth="121.0" text="Genre" />
       <MenuButton mnemonicParsing="false" prefHeight="28.0" prefWidth="10.0" style="-fx-background-color: transparent;">
         <items>
-          <MenuItem mnemonicParsing="false" text="Delete" />
-            <MenuItem mnemonicParsing="false" text="Add to Playlist" />
+          <MenuItem fx:id="deleteItem" mnemonicParsing="false" text="Delete" />
+            <MenuItem fx:id="addplaylistItem" mnemonicParsing="false" text="Add to Playlist" />
         </items>
       </MenuButton>
    </children>

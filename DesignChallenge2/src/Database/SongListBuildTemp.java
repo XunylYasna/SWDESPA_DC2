@@ -33,7 +33,6 @@ public class SongListBuildTemp {
             statement = myConn.createStatement();
             resultSet = statement.executeQuery(sql);
             while(resultSet.next()){
-//                eventMonth.add(new Event(resultSet.getDate("date"),resultSet.getString("event_name"),resultSet.getString("color")));
                 songID = resultSet.getInt("SongID");
                 songTitle = resultSet.getString("MusicTitle");
                 artist = resultSet.getString("Artist");

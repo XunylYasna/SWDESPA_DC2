@@ -6,7 +6,6 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.HBox?>
 
-
 <HBox fx:id="cellHbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <padding>
       <Insets left="30.0" />
@@ -18,9 +17,8 @@
       <Label fx:id="cellGenreLbl" prefHeight="30.0" prefWidth="121.0" text="Genre" />
       <MenuButton mnemonicParsing="false" prefHeight="28.0" prefWidth="10.0" style="-fx-background-color: transparent;">
         <items>
-            <MenuItem mnemonicParsing="false" text="Add to Playlist" />
-          <MenuItem mnemonicParsing="false" text="Edit" />
-          <MenuItem mnemonicParsing="false" text="Delete" />
+          <MenuItem fx:id="deleteItem" mnemonicParsing="false" text="Delete" />
+            <MenuItem fx:id="addplaylistItem" mnemonicParsing="false" text="Add to Playlist" />
         </items>
       </MenuButton>
    </children>

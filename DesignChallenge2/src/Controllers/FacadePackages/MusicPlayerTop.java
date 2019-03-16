@@ -4,6 +4,9 @@ import Model.Song;
 import javafx.scene.control.Labeled;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
+
+import javax.swing.*;
 
 public class MusicPlayerTop {
 
@@ -22,6 +25,9 @@ public class MusicPlayerTop {
         this.selectedAlbumLbl = selectedAlbumLbl;
         this.selectedFromLbl = selectedFromLbl;
         this.acoverImg = acoverImg;
+        acoverImg.setFitHeight(115);
+        acoverImg.setFitWidth(115);
+        acoverImg.setPreserveRatio(false);
     }
 
     public void initialize(String title, String artist, String genre, String album, String from, Image acover){

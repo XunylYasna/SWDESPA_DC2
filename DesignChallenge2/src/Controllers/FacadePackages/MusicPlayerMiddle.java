@@ -23,7 +23,7 @@ public class MusicPlayerMiddle {
         this.songlistView = songlistView;
     }
 
-    public void initialize(){
+    public void initialize(String username){
         //      Song load
         songList = songListBuildTemp.getSongs();
         list.removeAll();
