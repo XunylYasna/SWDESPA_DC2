@@ -35,6 +35,8 @@ public class addSongController {
 
     @FXML
     private Labeled songFileLbl;
+    @FXML
+    private Labeled statusLbl;
 
 
     File coverFile = null;
@@ -69,6 +71,9 @@ public class addSongController {
 //        }
 
         songAdded = songAddHandler.addSong(songTitle, artist, album, genre, coverFile, songFile);
+        if(songAdded != null){
+            statusLbl.setText("Song added. You may now close the window");
+        }
     }
 
     @FXML

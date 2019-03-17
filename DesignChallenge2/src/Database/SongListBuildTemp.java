@@ -4,10 +4,7 @@ import Model.Playlist;
 import Model.Song;
 import Model.User;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class SongListBuildTemp {
@@ -16,7 +13,7 @@ public class SongListBuildTemp {
     Statement statement = null;
     ResultSet resultSet;
 
-    public ArrayList<Song> getSongs(){
+    public ArrayList<Song> getSongs(String filtercolumn, String value){
         int songID;
         String songTitle;
         String artist;
@@ -29,9 +26,19 @@ public class SongListBuildTemp {
 
         String sql = "SELECT * FROM gulaplay.song;";
 
+
         try {
-            statement = myConn.createStatement();
-            resultSet = statement.executeQuery(sql);
+            if(filtercolumn != null && value != null){
+                PreparedStatement prepStatement = myConn.prepareStatement("SELECT * FROM gulaplay.song WHERE " + filtercolumn + " LIKE ?");
+                prepStatement.setString(1,value);
+                resultSet = prepStatement.executeQuery();
+            }
+
+            else{
+                statement = myConn.createStatement();
+                resultSet = statement.executeQuery(sql);
+            }
+
             while(resultSet.next()){
                 songID = resultSet.getInt("SongID");
                 songTitle = resultSet.getString("MusicTitle");
@@ -45,8 +52,26 @@ public class SongListBuildTemp {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return songList;
+    }
 
+    public ArrayList<String> getColumn(String columnname){
+
+        String artist;
+        ArrayList<String> artistList = new ArrayList<>();
+
+        String sql = "SELECT DISTINCT " + columnname + " FROM gulaplay.song;";
+
+        try {
+            statement = myConn.createStatement();
+            resultSet = statement.executeQuery(sql);
+            while(resultSet.next()){
+                artist = resultSet.getString(columnname);
+                artistList.add(artist);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return artistList;
     }
 }

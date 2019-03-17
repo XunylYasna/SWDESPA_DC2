@@ -40,10 +40,12 @@ public class MusicPlayerTop {
     }
 
     public void initialize(Song song, String from, Image acover){
-        this.selectedTitleLbl.setText(song.getSongTitle());
-        this.selectedArtistLbl.setText(song.getArtist());
-        this.selectedGenreLbl.setText(song.getGenre());
-        this.selectedAlbumLbl.setText(song.getAlbum());
+        if(song != null){
+            this.selectedTitleLbl.setText(song.getSongTitle());
+            this.selectedArtistLbl.setText(song.getArtist());
+            this.selectedGenreLbl.setText(song.getGenre());
+            this.selectedAlbumLbl.setText(song.getAlbum());
+        }
         this.selectedFromLbl.setText(from);
         this.acoverImg.setImage(acover);
     }

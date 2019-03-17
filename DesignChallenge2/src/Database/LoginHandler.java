@@ -20,8 +20,6 @@ public class LoginHandler{
     }
 
     public String verifyCredentials(String username, String password) {
-        boolean userExist = false;
-        boolean passwordMatch = false;
 
         int verified = 0;
 

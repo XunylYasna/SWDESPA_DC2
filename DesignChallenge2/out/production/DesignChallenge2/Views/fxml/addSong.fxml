@@ -17,5 +17,6 @@
       <JFXButton fx:id="songCBtn" layoutX="42.0" layoutY="303.0" onAction="#chooseSongCover" prefHeight="115.0" prefWidth="115.0" text="Upload Song Cover" />
       <JFXButton fx:id="confirmBtn" layoutX="352.0" layoutY="383.0" onAction="#confirm" styleClass="sumbit-btn" text="Confirm" />
       <Label fx:id="songFileLbl" layoutX="198.0" layoutY="348.0" text="No Song File Selected" />
+      <Label fx:id="statusLbl" layoutX="217.0" layoutY="391.0" prefHeight="18.0" prefWidth="130.0" textFill="#04ff00" />
    </children>
 </AnchorPane>

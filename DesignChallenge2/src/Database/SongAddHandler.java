@@ -14,14 +14,6 @@ public class SongAddHandler {
     Statement statement = null;
     ResultSet resultSet;
 
-    {
-        try {
-            statement = myConn.createStatement();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
     public Song addSong(String title, String artist, String genre, String album, File photo, File song) {
 
 //      temp
@@ -50,6 +42,7 @@ public class SongAddHandler {
             }
             prepStatement.execute();
 
+            statement = myConn.createStatement();
             sql = "Select * from song where SongID=LAST_INSERT_ID();";
             statement = myConn.createStatement();
             resultSet = statement.executeQuery(sql);

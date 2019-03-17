@@ -57,11 +57,12 @@
 }
 
 .side-btn{
+    -fx-min-width: 215px;
+    -fx-min-height: 40px;
+    -fx-pref-width: 215px;
+    -fx-pref-height: 40px;
+
     -fx-background-color:transparent;
-    /*-fx-background-radius:5px;*/
-    /*-fx-border-color:#cccccc;*/
-    /*-fx-border-radius:5px;*/
-    /*-fx-border-width:1px;*/
     -fx-border-color: transparent;
     -fx-text-fill:whitesmoke;
     -fx-text-alignment: left;
@@ -69,8 +70,22 @@
     -fx-pref-width: 200px;
     -fx-padding: 5 0 5 20
 }
+.pl-btn{
+    -fx-min-width: 215px;
+    -fx-min-height: 40px;
+    -fx-pref-width: 215px;
+    -fx-pref-height: 40px;
 
-.side-btn:hover{
+    -fx-background-color:transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill:pink;
+    -fx-text-alignment: left;
+    -fx-alignment: left;
+    -fx-pref-width: 200px;
+    -fx-padding: 5 0 5 20
+ }
+
+.side-btn:hover .pl-btn:hover{
     /*-fx-background-insets: 0 0 -1 0, 0, 1, 2;*/
     /*-fx-background-radius: 3px, 3px, 2px, 1px;*/
     /*-fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; !* 4 8 4 8 *!*/
@@ -116,7 +131,6 @@
     -fx-background-radius: 5em;
 }
 
-
 #playerpane{
     -fx-background-image: url("../res/playerpane.png");
 
@@ -139,10 +153,50 @@
     -fx-background-radius: 5em;
 }
 
-.music-ScrllPn{
-    -fx-background-color: pink;
+
+.grid-Btn{
+    -fx-min-width: 220px;
+    -fx-min-height: 115px;
+    -fx-pref-width: 220px;
+    -fx-pref-height: 115px;
+
+    -fx-background-color:transparent;
+    -fx-background-radius:5px;
+    -fx-border-color:#cccccc;
+    -fx-border-radius:5px;
+    -fx-border-width:1px;
+    -fx-text-fill:whitesmoke;
+    -fx-text-alignment: center;
+}
+
+
+.gridPane{
+    -fx-background-color: #696969;
+    -fx-padding: 10px;
+    -fx-vgap: 10px;
+    -fx-hgap: 10px;
+}
+
+.side-Vbx{
+    -fx-background-color: #333333;
+}
+
+.side-scrll{
+    -fx-background-color: #333333;
+    -fx-hbar-policy: never;
+    -fx-background: #333333;
+}
+
+.addPlaylist-btn{
+    -fx-background-color:transparent;
+    -fx-background-radius:5px;
+    -fx-border-color:#cccccc;
+    -fx-border-radius:5px;
+    -fx-border-width:1px;
+    -fx-text-fill:whitesmoke;
 }
 
 .music-Vbx{
+
 }
 

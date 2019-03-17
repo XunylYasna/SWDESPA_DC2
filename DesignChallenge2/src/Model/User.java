@@ -21,4 +21,32 @@ public class User {
         this.email = email;
         this.playlistList = playlistList;
     }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public ArrayList<Playlist> getPlaylistList() {
+        return playlistList;
+    }
 }
