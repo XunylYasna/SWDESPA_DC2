@@ -44,6 +44,7 @@ public class SongListBuildTemp {
         return songList;
     }
 
+
     public ArrayList<String> getColumn(String columnname){
 
         String artist;
@@ -76,7 +77,7 @@ public class SongListBuildTemp {
             resultSet = prepStatement.executeQuery();
 
             while(resultSet.next()){
-                songID = resultSet.getInt("PlaylistID");
+                songID = resultSet.getInt("SongID");
                 songIDList.add(songID);
             }
 
@@ -101,17 +102,16 @@ public class SongListBuildTemp {
         Song song = null;
         ResultSet getSongResult;
 
-
         try {
             PreparedStatement prepStatement = myConn.prepareStatement("SELECT * FROM gulaplay.song WHERE SongID LIKE ?");
             prepStatement.setInt(1,SongID);
             getSongResult = prepStatement.executeQuery();
 
             while(getSongResult.next()){
-                songTitle = resultSet.getString("MusicTitle");
-                artist = resultSet.getString("Artist");
-                album = resultSet.getString("Genre");
-                genre = resultSet.getString("Album");
+                songTitle = getSongResult.getString("MusicTitle");
+                artist = getSongResult.getString("Artist");
+                album = getSongResult.getString("Genre");
+                genre = getSongResult.getString("Album");
 
                 song = new Song(SongID, songTitle,artist, album, genre);
             }

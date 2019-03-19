@@ -10,10 +10,15 @@ import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Callback;
 
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 public class MusicPlayerMiddle {
@@ -53,11 +58,22 @@ public class MusicPlayerMiddle {
         songOL.addAll(songList);
         refreshListView();
 
-        songlistView.setCellFactory(new Callback<ListView<Song>, ListCell<Song>>() {
-            @Override
-            public ListCell<Song> call(ListView<Song> param) {
-                return new SongListViewCell();
-            }
+        songlistView.setCellFactory(lv -> {
+            SongListViewCell cell = new SongListViewCell();
+            return cell;
+        });
+    }
+
+    public void initialize(int playlistID){
+        songList = songListBuildTemp.getSongsofPlaylist(playlistID);
+        songOL.removeAll();
+        songOL.clear();
+        songOL.addAll(songList);
+        refreshListView();
+
+        songlistView.setCellFactory(lv -> {
+            SongListViewCell cell = new SongListViewCell();
+            return cell;
         });
     }
 

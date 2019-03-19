@@ -5,6 +5,7 @@ import Controllers.FacadePackages.MusicPlayerMiddle;
 import Controllers.FacadePackages.MusicPlayerTop;
 import Database.BlobSongGetter;
 import Database.PlaylistBuildTemp;
+import Database.PlaylistSongAddHandler;
 import Database.UserBuildTemp;
 import Model.Playlist;
 import Model.Song;
@@ -13,6 +14,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSlider;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -22,7 +24,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.*;
 import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
@@ -201,7 +206,7 @@ public class musicGuestController implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(scene);
         addPlaylistController addPlaylistController = (addPlaylistController) fxmlLoader.getController();
-        addPlaylistController.setUserID(4); //temporary Hirap 123
+        addPlaylistController.setUserID(user.getUserID());
         stage.showAndWait();
 
         if(addPlaylistController.getPlaylistadded() != null){
@@ -276,9 +281,7 @@ public class musicGuestController implements Initializable {
             user = userBuildTemp.getUser(username);
             PlaylistBuildTemp playlistBuildTemp = new PlaylistBuildTemp();
             playlistsList = playlistBuildTemp.getPlaylists(user.getUserID());
-            System.out.println("Init user dapat nasa baba playlist name ng this no " + playlistsList.size());
             for(int i = 0; i < playlistsList.size();i++){
-                System.out.println(playlistsList.get(i).getPlaylistName());
                 addPlaylistButton(playlistsList.get(i));
             }
 
@@ -291,8 +294,34 @@ public class musicGuestController implements Initializable {
     private void addPlaylistButton(Playlist playlist){
         JFXButton newplaylistButton = new JFXButton(playlist.getPlaylistName());
 //            Set button
+
+        newplaylistButton.setOnDragOver(new EventHandler<DragEvent>() {
+            @Override
+            public void handle(DragEvent event) {
+                event.acceptTransferModes(TransferMode.COPY_OR_MOVE);
+                event.consume();
+            }
+        });
+
+        newplaylistButton.setOnDragDropped(new EventHandler<DragEvent>() {
+            @Override
+            public void handle(DragEvent event) {
+                Dragboard db = event.getDragboard();
+                PlaylistSongAddHandler playlistSongAddHandler = new PlaylistSongAddHandler();
+                playlistSongAddHandler.addSongtoPlaylist(Integer.parseInt(db.getString()), playlist.getPlaylistID());
+            }
+        });
+
+        newplaylistButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                musicPlayerMiddle.initialize(playlist.getPlaylistID());
+            }
+        });
+
         newplaylistButton.getStyleClass().clear();
         newplaylistButton.getStyleClass().add("pl-btn");
+
         sideVbox.getChildren().add(newplaylistButton);
     }
 }
