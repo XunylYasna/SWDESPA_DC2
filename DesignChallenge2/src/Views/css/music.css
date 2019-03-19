@@ -200,3 +200,12 @@
 
 }
 
+.musicbar > .track{
+    -fx-background-color: #FFFFFF;
+}
+.musicbar > .colored-track{
+    -fx-background-color: #333333;
+}
+.musicbar > .thumb {
+    -fx-background-color: #333333;
+}
