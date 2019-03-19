@@ -6,7 +6,6 @@ public class Playlist {
     private int playlistID;
     private String playlistName;
     private String description;
-    private ArrayList<Song> songList;
     private int author;
 
     public Playlist(int playlistID, String playlistName, String description, int author) {
@@ -14,7 +13,6 @@ public class Playlist {
         this.playlistName = playlistName;
         this.description = description;
         this.author = author;
-        songList = new ArrayList<>();
     }
 
     public int getPlaylistID() {
@@ -27,10 +25,6 @@ public class Playlist {
 
     public String getDescription() {
         return description;
-    }
-
-    public ArrayList<Song> getSongList() {
-        return songList;
     }
 
     public int getAuthor() {

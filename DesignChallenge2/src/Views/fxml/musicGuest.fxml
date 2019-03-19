@@ -44,7 +44,7 @@
                         <Font size="28.0" />
                      </font>
                   </Label>
-                  <MenuButton fx:id="userMenu" layoutX="12.0" layoutY="59.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="183.0" styleClass="usermenu" text="Guest Gulapanatic" textFill="WHITE">
+                  <MenuButton fx:id="userMenu" layoutX="12.0" layoutY="59.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="183.0" styleClass="usermenu" text="Guest" textFill="WHITE">
                     <items>
                         <MenuItem fx:id="accountItem" mnemonicParsing="false" text="Account" />
                       <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout" />
@@ -53,7 +53,7 @@
                         <Font size="16.0" />
                      </font>
                   </MenuButton>
-                  <JFXButton layoutX="16.0" layoutY="397.0" onAction="#addplaylistDialog" prefHeight="32.0" prefWidth="176.0" styleClass="addPlaylist-btn" text="Add Playlist" />
+                  <JFXButton fx:id="addPlaylistBtn" layoutX="16.0" layoutY="397.0" onAction="#addplaylistDialog" prefHeight="32.0" prefWidth="176.0" styleClass="addPlaylist-btn" text="Add Playlist" />
                   <MediaView fx:id="videoMv" fitHeight="200.0" fitWidth="200.0" layoutX="8.0" layoutY="438.0" styleClass="vidPlayer" />
                   <ScrollPane layoutX="-4.0" layoutY="120.0" prefHeight="270.0" prefWidth="215.0" styleClass="side-scrll">
                      <content>

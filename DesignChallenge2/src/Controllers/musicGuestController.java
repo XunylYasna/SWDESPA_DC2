@@ -4,6 +4,9 @@ import Controllers.FacadePackages.MusicPlayerBottom;
 import Controllers.FacadePackages.MusicPlayerMiddle;
 import Controllers.FacadePackages.MusicPlayerTop;
 import Database.BlobSongGetter;
+import Database.PlaylistBuildTemp;
+import Database.UserBuildTemp;
+import Model.Playlist;
 import Model.Song;
 import Model.User;
 import com.jfoenix.controls.JFXButton;
@@ -29,6 +32,7 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class musicGuestController implements Initializable {
@@ -79,9 +83,11 @@ public class musicGuestController implements Initializable {
     private MenuItem accountItem;
     @FXML
     private VBox sideVbox;
+    @FXML
+    private JFXButton addPlaylistBtn;
 
 
-    //    Packages
+//    Packages
     MusicPlayerTop musicPlayerTop;
     MusicPlayerBottom musicPlayerBottom;
     MusicPlayerMiddle musicPlayerMiddle;
@@ -92,33 +98,29 @@ public class musicGuestController implements Initializable {
     Image cover = new Image("Controllers/defaultCover.png");
 
 //    User passing
-    String username = null;
+    String username;
     User user;
+
+//    Playlist passing
+    ArrayList<Playlist> playlistsList;
 
 //    Filter
     String filter = "Artist";
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         musicPlayerTop = new MusicPlayerTop(selectedTitleLbl,selectedArtistLbl,selectedGenreLbl,selectedAlbumLbl,selectedFromLbl,acoverImg);
         musicPlayerMiddle = new MusicPlayerMiddle(songlistView, gridPane, listViewPane, tableViewPane);
         musicPlayerBottom = new MusicPlayerBottom(songProgress,songVolume,videoMv, musicPlayerMiddle, blobSongGetter);
 
         musicPlayerBottom.initialize();
         musicPlayerMiddle.initialize(null,null);
-
-        if(username != null){
-            userMenu.setText(username);
-        }
-
-        else{
-            userMenu.setText("Guest Gulapa");
-            accountItem.setDisable(true);
-        }
-
         listViewPane.setVisible(true);
         tableViewPane.setVisible(false);
+
+        userMenu.setText("Guest Gulapanatic");
+        accountItem.setDisable(true);
+        addPlaylistBtn.setDisable(true);
 
     }
 
@@ -203,19 +205,14 @@ public class musicGuestController implements Initializable {
         stage.showAndWait();
 
         if(addPlaylistController.getPlaylistadded() != null){
-            JFXButton newplaylistButton = new JFXButton(addPlaylistController.getPlaylistadded().getPlaylistName());
-//            Set button
-            newplaylistButton.getStyleClass().clear();
-            newplaylistButton.getStyleClass().add("pl-btn");
-            sideVbox.getChildren().add(newplaylistButton);
+            addPlaylistButton(addPlaylistController.getPlaylistadded());
         }
     }
 
 //    User Related
     public void setUsername(String username){
-        System.out.println(username);
         this.username = username;
-        userMenu.setText(username);
+        initUser();
     }
 
     @FXML
@@ -225,6 +222,7 @@ public class musicGuestController implements Initializable {
         scene.setFill(Color.TRANSPARENT);
         Stage stage = (Stage)((Node)userMenu).getScene().getWindow();
         stage.setScene(scene);
+        musicPlayerBottom.dispose();
         stage.show();
     }
 
@@ -265,4 +263,36 @@ public class musicGuestController implements Initializable {
         tableViewPane.setVisible(true);
     }
 
+
+    private void initUser(){
+        if(username == null){
+            userMenu.setText("Guest Gulapanatic");
+            accountItem.setDisable(true);
+            addPlaylistBtn.setDisable(true);
+        }
+        else{
+            userMenu.setText(username);
+            UserBuildTemp userBuildTemp = new UserBuildTemp();
+            user = userBuildTemp.getUser(username);
+            PlaylistBuildTemp playlistBuildTemp = new PlaylistBuildTemp();
+            playlistsList = playlistBuildTemp.getPlaylists(user.getUserID());
+            System.out.println("Init user dapat nasa baba playlist name ng this no " + playlistsList.size());
+            for(int i = 0; i < playlistsList.size();i++){
+                System.out.println(playlistsList.get(i).getPlaylistName());
+                addPlaylistButton(playlistsList.get(i));
+            }
+
+            accountItem.setDisable(false);
+            addPlaylistBtn.setDisable(false);
+        }
+
+    }
+
+    private void addPlaylistButton(Playlist playlist){
+        JFXButton newplaylistButton = new JFXButton(playlist.getPlaylistName());
+//            Set button
+        newplaylistButton.getStyleClass().clear();
+        newplaylistButton.getStyleClass().add("pl-btn");
+        sideVbox.getChildren().add(newplaylistButton);
+    }
 }

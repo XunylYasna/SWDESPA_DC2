@@ -12,13 +12,16 @@ public class User {
 
     private ArrayList<Playlist> playlistList;
 
-    public User(int userID, String username, String firstname, String lastname, String password, String email, ArrayList<Playlist> playlistList) {
+    public User(int userID, String username, String firstname, String lastname, String password, String email) {
         this.userID = userID;
         this.username = username;
         this.firstname = firstname;
         this.lastname = lastname;
         this.password = password;
         this.email = email;
+    }
+
+    public void setPlaylistList(ArrayList<Playlist> playlistList) {
         this.playlistList = playlistList;
     }
 

@@ -59,14 +59,14 @@ public class LogInController{
         if(status.equals("Log In")){
             username = usernameTf.getText();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Views/fxml/musicGuest.fxml"));
-            Parent root = fxmlLoader.load();
-            Scene scene = new Scene(root);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(scene);
 
+            Parent root = fxmlLoader.load();
             musicGuestController musicGuestController = (musicGuestController) fxmlLoader.getController();
             musicGuestController.setUsername(username);
 
+            Scene scene = new Scene(root);
+            window.setScene(scene);
             window.show();
         }
 

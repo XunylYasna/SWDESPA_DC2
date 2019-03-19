@@ -172,4 +172,10 @@ public class MusicPlayerBottom {
 
         return songInit(song.getSongID());
     }
+
+    public void dispose(){
+        if(audioPlayer != null)
+            audioPlayer.dispose();
+        videoPlayer.dispose();
+    }
 }

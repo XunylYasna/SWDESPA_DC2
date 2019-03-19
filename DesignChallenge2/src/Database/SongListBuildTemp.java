@@ -21,11 +21,7 @@ public class SongListBuildTemp {
         String genre;
         ArrayList<Song> songList = new ArrayList<>();
         Song song;
-
-
-
         String sql = "SELECT * FROM gulaplay.song;";
-
 
         try {
             if(filtercolumn != null && value != null){
@@ -33,20 +29,13 @@ public class SongListBuildTemp {
                 prepStatement.setString(1,value);
                 resultSet = prepStatement.executeQuery();
             }
-
             else{
                 statement = myConn.createStatement();
                 resultSet = statement.executeQuery(sql);
             }
-
             while(resultSet.next()){
                 songID = resultSet.getInt("SongID");
-                songTitle = resultSet.getString("MusicTitle");
-                artist = resultSet.getString("Artist");
-                album = resultSet.getString("Genre");
-                genre = resultSet.getString("Album");
-
-                song = new Song(songID, songTitle,artist, album, genre);
+                song = getSong(songID);
                 songList.add(song);
             }
         } catch (SQLException e) {
@@ -74,4 +63,64 @@ public class SongListBuildTemp {
         }
         return artistList;
     }
+
+    public ArrayList<Song> getSongsofPlaylist(int PlaylistID){
+        int songID;
+        ArrayList<Song> songList = new ArrayList<>();
+        ArrayList<Integer> songIDList = new ArrayList<>();
+        Song song;
+
+        try {
+            PreparedStatement prepStatement = myConn.prepareStatement("SELECT * FROM gulaplay.songtoplaylist WHERE PlaylistID LIKE ?");
+            prepStatement.setInt(1,PlaylistID);
+            resultSet = prepStatement.executeQuery();
+
+            while(resultSet.next()){
+                songID = resultSet.getInt("PlaylistID");
+                songIDList.add(songID);
+            }
+
+            for(int i = 0; i < songIDList.size(); i++){
+                song = getSong(songIDList.get(i));
+                songList.add(song);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return songList;
+    }
+
+    public Song getSong(int SongID){
+        String songTitle;
+        String artist;
+        String album;
+        String genre;
+        ArrayList<Song> songList = new ArrayList<>();
+        Song song = null;
+        ResultSet getSongResult;
+
+
+        try {
+            PreparedStatement prepStatement = myConn.prepareStatement("SELECT * FROM gulaplay.song WHERE SongID LIKE ?");
+            prepStatement.setInt(1,SongID);
+            getSongResult = prepStatement.executeQuery();
+
+            while(getSongResult.next()){
+                songTitle = resultSet.getString("MusicTitle");
+                artist = resultSet.getString("Artist");
+                album = resultSet.getString("Genre");
+                genre = resultSet.getString("Album");
+
+                song = new Song(SongID, songTitle,artist, album, genre);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return song;
+    }
+
+
 }
