@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 
 <!--<HBox fx:id="cellHbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#dragDetect" onDragDone="#dragDone" onDragDropped="#dragDrop" onDragEntered="#dragEntered" onDragExited="#dragExited" prefHeight="20.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.cellController">-->
+
 <HBox fx:id="cellHbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <padding>
       <Insets left="30.0" />
@@ -19,7 +20,7 @@
       <MenuButton mnemonicParsing="false" prefHeight="28.0" prefWidth="10.0" style="-fx-background-color: transparent;">
         <items>
           <MenuItem fx:id="deleteItem" mnemonicParsing="false" text="Delete" />
-            <MenuItem fx:id="addplaylistItem" mnemonicParsing="false" text="Add to Playlist" />
+            <MenuItem fx:id="addfavItem" mnemonicParsing="false" text="Add to Favorites" />
         </items>
       </MenuButton>
    </children>

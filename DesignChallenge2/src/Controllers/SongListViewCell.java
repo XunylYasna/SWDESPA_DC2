@@ -33,9 +33,10 @@ public class SongListViewCell extends ListCell<Song> {
     @FXML
     private MenuItem deleteItem;
     @FXML
-    private MenuItem addplaylistItem;
+    private MenuItem addfavItem;
 
     FXMLLoader mLLoader;
+
 
     @Override
     protected void updateItem(Song song, boolean empty) {
@@ -62,6 +63,7 @@ public class SongListViewCell extends ListCell<Song> {
             cellAlbumLbl.setText(song.getAlbum());
             cellGenreLbl.setText(song.getGenre());
 
+
             deleteItem.setOnAction(event -> {
                 SongDeleteHandler songDeleteHandler = new SongDeleteHandler();
                 System.out.println("Delete " + getItem().getSongTitle() );
@@ -81,32 +83,6 @@ public class SongListViewCell extends ListCell<Song> {
             setGraphic(cellHbox);
         }
     }
-
-
-//    @FXML
-//    public void dragDetect(){
-//        System.out.println("detect");
-//    }
-//
-//    @FXML
-//    public void dragDone(){
-//        System.out.println("done");
-//    }
-//
-//    @FXML
-//    public void dragDrop(){
-//        System.out.println("drop");
-//    }
-//
-//    @FXML
-//    public void dragEntered(){
-//        System.out.println("entered");
-//    }
-//
-//    @FXML
-//    public void dragExited(){
-//        System.out.println("exited");
-//    }
 
 
 }

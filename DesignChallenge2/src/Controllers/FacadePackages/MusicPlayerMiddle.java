@@ -26,6 +26,7 @@ public class MusicPlayerMiddle {
     private ArrayList<Song> songList;
     private Song songSelected;
     String filter;
+    Boolean user;
 
     private ArrayList<String> stringList;
 
@@ -42,7 +43,7 @@ public class MusicPlayerMiddle {
     private Pane listViewPane;
     private Pane tableViewPane;
 
-    public MusicPlayerMiddle(ListView<Song> songlistView, GridPane gridPane, Pane listViewPane, Pane tableViewPane) {
+    public MusicPlayerMiddle(ListView<Song> songlistView, GridPane gridPane, Pane listViewPane, Pane tableViewPane, Boolean user) {
         this.songlistView = songlistView;
         this.gridPane = gridPane;
         this.listViewPane = listViewPane;

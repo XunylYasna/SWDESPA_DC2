@@ -46,6 +46,14 @@ public class MusicPlayerTop {
             this.selectedGenreLbl.setText(song.getGenre());
             this.selectedAlbumLbl.setText(song.getAlbum());
         }
+
+        else{
+            this.selectedTitleLbl.setText("");
+            this.selectedArtistLbl.setText("");
+            this.selectedGenreLbl.setText("");
+            this.selectedAlbumLbl.setText("");
+        }
+
         this.selectedFromLbl.setText(from);
         this.acoverImg.setImage(acover);
     }

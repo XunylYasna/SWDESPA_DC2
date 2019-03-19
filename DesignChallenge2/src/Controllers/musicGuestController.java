@@ -59,6 +59,8 @@ public class musicGuestController implements Initializable {
     //    Right Anchor Pane UI
     @FXML
     private AnchorPane rightAnchor;
+    @FXML
+    private ScrollPane scrollAnchor;
 
 
     //    Music Player Middle UI
@@ -110,12 +112,12 @@ public class musicGuestController implements Initializable {
     ArrayList<Playlist> playlistsList;
 
 //    Filter
-    String filter = "Artist";
+    String filter = "Song List";
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         musicPlayerTop = new MusicPlayerTop(selectedTitleLbl,selectedArtistLbl,selectedGenreLbl,selectedAlbumLbl,selectedFromLbl,acoverImg);
-        musicPlayerMiddle = new MusicPlayerMiddle(songlistView, gridPane, listViewPane, tableViewPane);
+        musicPlayerMiddle = new MusicPlayerMiddle(songlistView, gridPane, listViewPane, tableViewPane, user!=null);
         musicPlayerBottom = new MusicPlayerBottom(songProgress,songVolume,videoMv, musicPlayerMiddle, blobSongGetter);
 
         musicPlayerBottom.initialize();
@@ -126,6 +128,8 @@ public class musicGuestController implements Initializable {
         userMenu.setText("Guest Gulapanatic");
         accountItem.setDisable(true);
         addPlaylistBtn.setDisable(true);
+        backAccount(null);
+        sideSong(null);
 
     }
 
@@ -236,6 +240,7 @@ public class musicGuestController implements Initializable {
     @FXML
     void sideSong (ActionEvent event){
         filter = null;
+        musicPlayerTop.initialize(songSelected, "Song List", null);
         musicPlayerMiddle.initialize(null,null);
         listViewPane.setVisible(true);
         tableViewPane.setVisible(false);
@@ -315,6 +320,7 @@ public class musicGuestController implements Initializable {
         newplaylistButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                musicPlayerTop.initialize(songSelected, playlist.getPlaylistName(), null);
                 musicPlayerMiddle.initialize(playlist.getPlaylistID());
             }
         });
@@ -323,5 +329,17 @@ public class musicGuestController implements Initializable {
         newplaylistButton.getStyleClass().add("pl-btn");
 
         sideVbox.getChildren().add(newplaylistButton);
+    }
+
+    @FXML
+    public void accountMenu(ActionEvent event){
+        scrollAnchor.setVisible(true);
+        rightAnchor.setVisible(false);
+    }
+
+    @FXML
+    public void backAccount(ActionEvent event){
+        scrollAnchor.setVisible(false);
+        rightAnchor.setVisible(true);
     }
 }
