@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="165670e9-b38b-4b12-8d84-e4c4350d5229" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/Builder/UserBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/FacadePackages/MusicPlayerBottom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/FacadePackages/MusicPlayerBottom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/LogInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/LogInController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Controllers/musicGuestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/SongListBuildTemp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/SongListBuildTemp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/UserBuildTemp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Database/UserBuildTemp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Views/fxml/addSong.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Views/fxml/addSong.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DesignChallenge2/Views/fxml/musicGuest.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DesignChallenge2/Views/fxml/musicGuest.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songToPlay.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/songToPlay.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Builder/UserBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerBottom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerBottom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/musicGuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/musicGuestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/SongListBuildTemp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/SongListBuildTemp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/UserBuildTemp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/UserBuildTemp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/fxml/addSong.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/fxml/addSong.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/fxml/musicGuest.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/fxml/musicGuest.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="165670e9-b38b-4b12-8d84-e4c4350d5229" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,15 +25,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="JAVA/" value="1" />
+          <entry key="JAVA/Controllers" value="1" />
           <entry key="css" value="3" />
           <entry key="fxml" value="9" />
-          <entry key="java" value="82" />
+          <entry key="java" value="83" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="JAVA" value="82" />
+          <entry key="JAVA" value="83" />
+          <entry key="UML" value="2" />
           <entry key="XML" value="9" />
         </counts>
       </usages-collector>
@@ -78,10 +58,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/musicGuestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="1469">
               <caret line="233" selection-start-line="233" selection-end-line="233" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -91,22 +71,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/UserBuildTemp.java">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerSide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/PlaylistBuildTemp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="32" column="93" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="93" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -127,11 +95,181 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerBottom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2601">
-              <caret line="177" column="12" selection-start-line="177" selection-start-column="12" selection-end-line="177" selection-end-column="12" />
+            <state relative-caret-position="44">
+              <caret line="165" column="52" lean-forward="true" selection-start-line="165" selection-start-column="52" selection-end-line="165" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/Controllers">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>Controllers</OriginalElement>
+              <nodes>
+                <node x="222.99999999999997" y="101.0">Controllers.addSongController</node>
+                <node x="155.31249999999997" y="745.0">Controllers.LogInController</node>
+                <node x="0.0" y="0.0">Controllers.SongListViewCell</node>
+                <node x="0.0" y="885.0">Controllers.RegistrationController</node>
+                <node x="756.0" y="0.0">Controllers.StartController</node>
+                <node x="504.0" y="123.0">Controllers.addPlaylistController</node>
+                <node x="37.99999999999997" y="156.5">Controllers.FacadePackages</node>
+                <node x="149.81249999999997" y="291.0">Controllers.musicGuestController</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="Controllers.FacadePackages" target="Controllers.FacadePackages">
+                  <point x="-61.875" y="14.5" />
+                  <point x="58.62499999999997" y="205.5" />
+                  <point x="18.0" y="205.5" />
+                  <point x="18.0" y="178.25" />
+                  <point x="-82.5" y="7.25" />
+                </edge>
+                <edge source="Controllers.musicGuestController" target="Controllers.FacadePackages">
+                  <point x="-32.5" y="-202.0" />
+                  <point x="247.31249999999997" y="261.0" />
+                  <point x="182.37499999999997" y="261.0" />
+                  <point x="61.875" y="14.5" />
+                </edge>
+                <edge source="Controllers.musicGuestController" target="Controllers.addPlaylistController">
+                  <point x="97.5" y="-202.0" />
+                  <point x="377.3125" y="271.0" />
+                  <point x="607.5" y="271.0" />
+                  <point x="0.0" y="48.0" />
+                </edge>
+                <edge source="Controllers.LogInController" target="Controllers.musicGuestController">
+                  <point x="0.0" y="-47.5" />
+                  <point x="0.0" y="202.0" />
+                </edge>
+                <edge source="Controllers.musicGuestController" target="Controllers.addSongController">
+                  <point x="32.5" y="-202.0" />
+                  <point x="312.3125" y="271.0" />
+                  <point x="353.5" y="271.0" />
+                  <point x="0.0" y="70.0" />
+                </edge>
+                <edge source="Controllers.FacadePackages" target="Controllers.SongListViewCell">
+                  <point x="0.0" y="-14.5" />
+                  <point x="0.0" y="25.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.9" x="-26.333333333333314" y="523.6666666666667" />
+              <SelectedNodes>
+                <node>Controllers.addSongController</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Properties</Category>
+                <Category>Inner Classes</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="uml://JAVA/">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="72.30853174603176" y="211.451171875">Controllers</node>
+                <node x="151.0" y="569.451171875">com</node>
+                <node x="524.0" y="421.451171875">images</node>
+                <node x="353.0" y="421.451171875">netscape</node>
+                <node x="140.0" y="643.451171875">css</node>
+                <node x="472.0" y="495.451171875">Views</node>
+                <node x="160.0" y="495.451171875">oracle</node>
+                <node x="443.0" y="569.451171875">org</node>
+                <node x="282.0" y="311.451171875">toolbarButtonGraphics</node>
+                <node x="585.0" y="569.451171875">sun</node>
+                <node x="0.0" y="421.451171875">META-INF</node>
+                <node x="0.0" y="643.451171875">jdk</node>
+                <node x="177.0" y="421.451171875">javazoom</node>
+                <node x="526.0" y="311.451171875">groovyjarjarasm</node>
+                <node x="298.0" y="569.451171875">java</node>
+                <node x="0.0" y="495.451171875">groovy</node>
+                <node x="0.0" y="569.451171875">javax</node>
+                <node x="80.62698412698413" y="13.451171875">Model</node>
+                <node x="20.0" y="122.451171875">Database</node>
+                <node x="30.0" y="311.451171875">groovyjarjarcommonscli</node>
+                <node x="317.0" y="495.451171875">javafx</node>
+                <node x="293.30853174603175" y="15.867838541666664">groovyjarjarantlr</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="Model" target="Model">
+                  <point x="-48.42857142857143" y="14.5" />
+                  <point x="88.6984126984127" y="62.451171875" />
+                  <point x="60.62698412698413" y="62.451171875" />
+                  <point x="60.62698412698413" y="35.201171875" />
+                  <point x="-56.5" y="7.25" />
+                </edge>
+                <edge source="Controllers" target="Model">
+                  <point x="56.666666666666686" y="-14.5" />
+                  <point x="196.97519841269843" y="191.451171875" />
+                  <point x="181.5" y="191.451171875" />
+                  <point x="181.5" y="102.451171875" />
+                  <point x="185.55555555555554" y="102.451171875" />
+                  <point x="48.428571428571416" y="14.5" />
+                </edge>
+                <edge source="Database" target="Model">
+                  <point x="32.25" y="-14.5" />
+                  <point x="116.75" y="102.451171875" />
+                  <point x="137.12698412698413" y="102.451171875" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="Controllers" target="Database">
+                  <point x="-56.666666666666686" y="-14.5" />
+                  <point x="83.64186507936508" y="191.451171875" />
+                  <point x="68.375" y="191.451171875" />
+                  <point x="-16.125" y="14.5" />
+                </edge>
+                <edge source="groovyjarjarantlr" target="groovyjarjarantlr">
+                  <point x="55.66666666666666" y="14.5" />
+                  <point x="432.47519841269843" y="84.86783854166666" />
+                  <point x="253.30853174603175" y="84.86783854166666" />
+                  <point x="253.30853174603175" y="20.701171875" />
+                  <point x="-83.5" y="-9.666666666666664" />
+                </edge>
+                <edge source="Controllers" target="Controllers">
+                  <point x="0.0" y="14.5" />
+                  <point x="140.30853174603175" y="260.451171875" />
+                  <point x="52.30853174603176" y="260.451171875" />
+                  <point x="52.30853174603176" y="225.951171875" />
+                  <point x="-68.0" y="-0.0" />
+                </edge>
+                <edge source="groovyjarjarcommonscli" target="groovyjarjarcommonscli">
+                  <point x="-51.75" y="14.5" />
+                  <point x="81.75" y="360.451171875" />
+                  <point x="10.0" y="360.451171875" />
+                  <point x="10.0" y="333.201171875" />
+                  <point x="-103.5" y="7.25" />
+                </edge>
+                <edge source="Database" target="Database">
+                  <point x="-48.375" y="14.5" />
+                  <point x="36.125" y="171.451171875" />
+                  <point x="0.0" y="171.451171875" />
+                  <point x="0.0" y="136.951171875" />
+                  <point x="-64.5" y="-0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.7566137566137566" x="244.5" y="273.5" />
+              <SelectedNodes>
+                <node>Controllers</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Properties</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -392,12 +530,12 @@
       <workItem from="1552743618292" duration="14861000" />
       <workItem from="1552798789174" duration="27031000" />
       <workItem from="1552970744201" duration="148000" />
-      <workItem from="1552985560513" duration="236000" />
+      <workItem from="1552985560513" duration="579000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90332000" />
+    <option name="totallyTimeSpent" value="90666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -408,7 +546,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1885906" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.1885906" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -416,7 +554,7 @@
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32867134" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.32867134" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32867134" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -595,13 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerSide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -620,16 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-697">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/musicGuestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="233" selection-start-line="233" selection-end-line="233" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -657,16 +778,6 @@
           <folding>
             <element signature="e#2053#2054#0" expanded="true" />
             <element signature="e#2120#2121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerBottom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2601">
-          <caret line="177" column="12" selection-start-line="177" selection-start-column="12" selection-end-line="177" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -700,6 +811,199 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="200" selection-start-line="26" selection-start-column="200" selection-end-line="26" selection-end-column="200" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/musicGuestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1469">
+          <caret line="233" selection-start-line="233" selection-end-line="233" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/FacadePackages/MusicPlayerBottom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="165" column="52" lean-forward="true" selection-start-line="165" selection-start-column="52" selection-end-line="165" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Controllers">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Controllers</OriginalElement>
+          <nodes>
+            <node x="222.99999999999997" y="101.0">Controllers.addSongController</node>
+            <node x="155.31249999999997" y="745.0">Controllers.LogInController</node>
+            <node x="0.0" y="0.0">Controllers.SongListViewCell</node>
+            <node x="0.0" y="885.0">Controllers.RegistrationController</node>
+            <node x="756.0" y="0.0">Controllers.StartController</node>
+            <node x="504.0" y="123.0">Controllers.addPlaylistController</node>
+            <node x="37.99999999999997" y="156.5">Controllers.FacadePackages</node>
+            <node x="149.81249999999997" y="291.0">Controllers.musicGuestController</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Controllers.FacadePackages" target="Controllers.FacadePackages">
+              <point x="-61.875" y="14.5" />
+              <point x="58.62499999999997" y="205.5" />
+              <point x="18.0" y="205.5" />
+              <point x="18.0" y="178.25" />
+              <point x="-82.5" y="7.25" />
+            </edge>
+            <edge source="Controllers.musicGuestController" target="Controllers.FacadePackages">
+              <point x="-32.5" y="-202.0" />
+              <point x="247.31249999999997" y="261.0" />
+              <point x="182.37499999999997" y="261.0" />
+              <point x="61.875" y="14.5" />
+            </edge>
+            <edge source="Controllers.musicGuestController" target="Controllers.addPlaylistController">
+              <point x="97.5" y="-202.0" />
+              <point x="377.3125" y="271.0" />
+              <point x="607.5" y="271.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="Controllers.LogInController" target="Controllers.musicGuestController">
+              <point x="0.0" y="-47.5" />
+              <point x="0.0" y="202.0" />
+            </edge>
+            <edge source="Controllers.musicGuestController" target="Controllers.addSongController">
+              <point x="32.5" y="-202.0" />
+              <point x="312.3125" y="271.0" />
+              <point x="353.5" y="271.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+            <edge source="Controllers.FacadePackages" target="Controllers.SongListViewCell">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="25.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.9" x="-26.333333333333314" y="523.6666666666667" />
+          <SelectedNodes>
+            <node>Controllers.addSongController</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="72.30853174603176" y="211.451171875">Controllers</node>
+            <node x="151.0" y="569.451171875">com</node>
+            <node x="524.0" y="421.451171875">images</node>
+            <node x="353.0" y="421.451171875">netscape</node>
+            <node x="140.0" y="643.451171875">css</node>
+            <node x="472.0" y="495.451171875">Views</node>
+            <node x="160.0" y="495.451171875">oracle</node>
+            <node x="443.0" y="569.451171875">org</node>
+            <node x="282.0" y="311.451171875">toolbarButtonGraphics</node>
+            <node x="585.0" y="569.451171875">sun</node>
+            <node x="0.0" y="421.451171875">META-INF</node>
+            <node x="0.0" y="643.451171875">jdk</node>
+            <node x="177.0" y="421.451171875">javazoom</node>
+            <node x="526.0" y="311.451171875">groovyjarjarasm</node>
+            <node x="298.0" y="569.451171875">java</node>
+            <node x="0.0" y="495.451171875">groovy</node>
+            <node x="0.0" y="569.451171875">javax</node>
+            <node x="80.62698412698413" y="13.451171875">Model</node>
+            <node x="20.0" y="122.451171875">Database</node>
+            <node x="30.0" y="311.451171875">groovyjarjarcommonscli</node>
+            <node x="317.0" y="495.451171875">javafx</node>
+            <node x="293.30853174603175" y="15.867838541666664">groovyjarjarantlr</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Model" target="Model">
+              <point x="-48.42857142857143" y="14.5" />
+              <point x="88.6984126984127" y="62.451171875" />
+              <point x="60.62698412698413" y="62.451171875" />
+              <point x="60.62698412698413" y="35.201171875" />
+              <point x="-56.5" y="7.25" />
+            </edge>
+            <edge source="Controllers" target="Model">
+              <point x="56.666666666666686" y="-14.5" />
+              <point x="196.97519841269843" y="191.451171875" />
+              <point x="181.5" y="191.451171875" />
+              <point x="181.5" y="102.451171875" />
+              <point x="185.55555555555554" y="102.451171875" />
+              <point x="48.428571428571416" y="14.5" />
+            </edge>
+            <edge source="Database" target="Model">
+              <point x="32.25" y="-14.5" />
+              <point x="116.75" y="102.451171875" />
+              <point x="137.12698412698413" y="102.451171875" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="Controllers" target="Database">
+              <point x="-56.666666666666686" y="-14.5" />
+              <point x="83.64186507936508" y="191.451171875" />
+              <point x="68.375" y="191.451171875" />
+              <point x="-16.125" y="14.5" />
+            </edge>
+            <edge source="groovyjarjarantlr" target="groovyjarjarantlr">
+              <point x="55.66666666666666" y="14.5" />
+              <point x="432.47519841269843" y="84.86783854166666" />
+              <point x="253.30853174603175" y="84.86783854166666" />
+              <point x="253.30853174603175" y="20.701171875" />
+              <point x="-83.5" y="-9.666666666666664" />
+            </edge>
+            <edge source="Controllers" target="Controllers">
+              <point x="0.0" y="14.5" />
+              <point x="140.30853174603175" y="260.451171875" />
+              <point x="52.30853174603176" y="260.451171875" />
+              <point x="52.30853174603176" y="225.951171875" />
+              <point x="-68.0" y="-0.0" />
+            </edge>
+            <edge source="groovyjarjarcommonscli" target="groovyjarjarcommonscli">
+              <point x="-51.75" y="14.5" />
+              <point x="81.75" y="360.451171875" />
+              <point x="10.0" y="360.451171875" />
+              <point x="10.0" y="333.201171875" />
+              <point x="-103.5" y="7.25" />
+            </edge>
+            <edge source="Database" target="Database">
+              <point x="-48.375" y="14.5" />
+              <point x="36.125" y="171.451171875" />
+              <point x="0.0" y="171.451171875" />
+              <point x="0.0" y="136.951171875" />
+              <point x="-64.5" y="-0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.7566137566137566" x="244.5" y="273.5" />
+          <SelectedNodes>
+            <node>Controllers</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
