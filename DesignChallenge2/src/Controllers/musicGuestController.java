@@ -1,5 +1,6 @@
 package Controllers;
 
+import Controllers.FacadePackages.AccountPane;
 import Controllers.FacadePackages.MusicPlayerBottom;
 import Controllers.FacadePackages.MusicPlayerMiddle;
 import Controllers.FacadePackages.MusicPlayerTop;
@@ -33,7 +34,6 @@ import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -94,6 +94,18 @@ public class musicGuestController implements Initializable {
     private JFXButton addPlaylistBtn;
 
 
+//    Account UI
+    @FXML
+    TextField fnameTf;
+    @FXML
+    TextField lnameTf;
+    @FXML
+    TextField emailTf;
+    @FXML
+    ListView<String> favoritesListView;
+
+    AccountPane accountPane;
+
 //    Packages
     MusicPlayerTop musicPlayerTop;
     MusicPlayerBottom musicPlayerBottom;
@@ -117,7 +129,7 @@ public class musicGuestController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         musicPlayerTop = new MusicPlayerTop(selectedTitleLbl,selectedArtistLbl,selectedGenreLbl,selectedAlbumLbl,selectedFromLbl,acoverImg);
-        musicPlayerMiddle = new MusicPlayerMiddle(songlistView, gridPane, listViewPane, tableViewPane, user!=null);
+        musicPlayerMiddle = new MusicPlayerMiddle(songlistView, gridPane, listViewPane, tableViewPane);
         musicPlayerBottom = new MusicPlayerBottom(songProgress,songVolume,videoMv, musicPlayerMiddle, blobSongGetter);
 
         musicPlayerBottom.initialize();
@@ -290,8 +302,11 @@ public class musicGuestController implements Initializable {
                 addPlaylistButton(playlistsList.get(i));
             }
 
+            musicPlayerMiddle.setUserID(user.getUserID());
             accountItem.setDisable(false);
             addPlaylistBtn.setDisable(false);
+            System.out.println(user.getUserID());
+            accountPane = new AccountPane(user, fnameTf, lnameTf, emailTf, favoritesListView);
         }
 
     }
@@ -322,6 +337,9 @@ public class musicGuestController implements Initializable {
             public void handle(ActionEvent event) {
                 musicPlayerTop.initialize(songSelected, playlist.getPlaylistName(), null);
                 musicPlayerMiddle.initialize(playlist.getPlaylistID());
+                listViewPane.setVisible(true);
+                tableViewPane.setVisible(false);
+
             }
         });
 
@@ -335,6 +353,7 @@ public class musicGuestController implements Initializable {
     public void accountMenu(ActionEvent event){
         scrollAnchor.setVisible(true);
         rightAnchor.setVisible(false);
+        accountPane.setFavoritesListView();
     }
 
     @FXML

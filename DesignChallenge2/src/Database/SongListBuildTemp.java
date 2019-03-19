@@ -93,6 +93,34 @@ public class SongListBuildTemp {
         return songList;
     }
 
+    public ArrayList<Song> getFavorites(int userID){
+        int songID;
+        ArrayList<Song> songList = new ArrayList<>();
+        ArrayList<Integer> songIDList = new ArrayList<>();
+        Song song;
+
+        try {
+            PreparedStatement prepStatement = myConn.prepareStatement("SELECT * FROM gulaplay.songuserfavorites WHERE userID LIKE ?");
+            prepStatement.setInt(1,userID);
+            resultSet = prepStatement.executeQuery();
+
+            while(resultSet.next()){
+                songID = resultSet.getInt("SongID");
+                songIDList.add(songID);
+            }
+
+            for(int i = 0; i < songIDList.size(); i++){
+                song = getSong(songIDList.get(i));
+                songList.add(song);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return songList;
+    }
+
     public Song getSong(int SongID){
         String songTitle;
         String artist;

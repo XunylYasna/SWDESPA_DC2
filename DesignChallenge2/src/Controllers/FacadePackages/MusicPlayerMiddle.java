@@ -6,19 +6,10 @@ import Model.Song;
 import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.input.ClipboardContent;
-import javafx.scene.input.DragEvent;
-import javafx.scene.input.Dragboard;
-import javafx.scene.input.TransferMode;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javafx.util.Callback;
 
-import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 public class MusicPlayerMiddle {
@@ -26,7 +17,7 @@ public class MusicPlayerMiddle {
     private ArrayList<Song> songList;
     private Song songSelected;
     String filter;
-    Boolean user;
+    int userID = -1;
 
     private ArrayList<String> stringList;
 
@@ -43,11 +34,15 @@ public class MusicPlayerMiddle {
     private Pane listViewPane;
     private Pane tableViewPane;
 
-    public MusicPlayerMiddle(ListView<Song> songlistView, GridPane gridPane, Pane listViewPane, Pane tableViewPane, Boolean user) {
+    public MusicPlayerMiddle(ListView<Song> songlistView, GridPane gridPane, Pane listViewPane, Pane tableViewPane) {
         this.songlistView = songlistView;
         this.gridPane = gridPane;
         this.listViewPane = listViewPane;
         this.tableViewPane = tableViewPane;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public void initialize(String filtercolumn, String value){
@@ -61,6 +56,7 @@ public class MusicPlayerMiddle {
 
         songlistView.setCellFactory(lv -> {
             SongListViewCell cell = new SongListViewCell();
+            cell.setUserID(userID);
             return cell;
         });
     }
@@ -74,6 +70,7 @@ public class MusicPlayerMiddle {
 
         songlistView.setCellFactory(lv -> {
             SongListViewCell cell = new SongListViewCell();
+            cell.setUserID(userID);
             return cell;
         });
     }

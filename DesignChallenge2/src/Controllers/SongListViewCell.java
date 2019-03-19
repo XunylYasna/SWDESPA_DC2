@@ -1,6 +1,7 @@
 package Controllers;
 
 import Database.SongDeleteHandler;
+import Database.SongFavoriteHandler;
 import Model.Song;
 import com.jfoenix.controls.JFXHamburger;
 import javafx.collections.ObservableList;
@@ -36,6 +37,7 @@ public class SongListViewCell extends ListCell<Song> {
     private MenuItem addfavItem;
 
     FXMLLoader mLLoader;
+    private int userID = -1;
 
 
     @Override
@@ -63,12 +65,20 @@ public class SongListViewCell extends ListCell<Song> {
             cellAlbumLbl.setText(song.getAlbum());
             cellGenreLbl.setText(song.getGenre());
 
+            if(userID == -1){
+                addfavItem.setDisable(true);
+            }
 
             deleteItem.setOnAction(event -> {
                 SongDeleteHandler songDeleteHandler = new SongDeleteHandler();
                 System.out.println("Delete " + getItem().getSongTitle() );
                 songDeleteHandler.deleteSong(getItem().getSongID());
                 getListView().getItems().remove(getItem());
+            });
+
+            addfavItem.setOnAction(event -> {
+                SongFavoriteHandler songFavoriteHandler = new SongFavoriteHandler();
+                songFavoriteHandler.favSong(getItem().getSongID(),userID);
             });
 
             setOnDragDetected(event -> {
@@ -79,10 +89,17 @@ public class SongListViewCell extends ListCell<Song> {
                 db.setContent(cc);
             });
 
+
             setText(null);
             setGraphic(cellHbox);
         }
     }
+
+    public void setUserID(int userID){
+        this.userID = userID;
+    }
+
+
 
 
 }
