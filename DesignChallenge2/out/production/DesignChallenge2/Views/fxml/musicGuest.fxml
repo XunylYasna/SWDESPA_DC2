@@ -12,7 +12,6 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -73,7 +72,7 @@
         </AnchorPane>
             <StackPane prefHeight="629.0" prefWidth="705.0">
                <children>
-                  <AnchorPane id="Content" fx:id="rightAnchor" minHeight="-1.0" minWidth="-1.0" prefHeight="702.0" prefWidth="824.0" visible="false">
+                  <AnchorPane id="Content" fx:id="rightAnchor" minHeight="-1.0" minWidth="-1.0" prefHeight="702.0" prefWidth="824.0">
                      <children>
                         <AnchorPane id="musicpane" maxWidth="723.2" minWidth="723.2" prefHeight="120.0" prefWidth="723.2">
                            <children>
@@ -143,35 +142,9 @@
                                        </font>
                                     </Label>
                                     <ListView fx:id="favoritesListView" layoutX="30.0" layoutY="355.0" prefHeight="247.0" prefWidth="314.0" AnchorPane.bottomAnchor="298.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="366.0" AnchorPane.topAnchor="355.0" />
-                                    <Label fx:id="mostPlayedLabel1" layoutX="34.0" layoutY="321.0" text="Favorites">
-                                       <font>
-                                          <Font size="16.0" />
-                                       </font>
-                                    </Label>
-                                    <TextField fx:id="fnameTf" layoutX="147.0" layoutY="186.0" />
-                                    <TextField fx:id="lnameTf" layoutX="147.0" layoutY="220.0" />
-                                    <Label layoutX="40.0" layoutY="141.0" text="Profile">
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                    </Label>
-                                    <Label layoutX="57.0" layoutY="189.0" text="First Name">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <Label layoutX="58.0" layoutY="223.0" text="Last Name">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <Label layoutX="58.0" layoutY="256.0" text="E-mail">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <TextField fx:id="emailTf" layoutX="147.0" layoutY="253.0" />
                                     <JFXButton layoutX="632.0" layoutY="22.0" onAction="#backAccount" text="Back" />
+                                    <Label layoutX="36.0" layoutY="130.0" text="Recent Activities" />
+                                    <JFXListView layoutX="35.0" layoutY="155.0" prefHeight="400.0" prefWidth="246.0" />
                                  </children>
                               </AnchorPane>
                            </children>

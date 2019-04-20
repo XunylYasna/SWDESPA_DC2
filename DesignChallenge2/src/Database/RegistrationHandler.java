@@ -16,7 +16,7 @@ public class RegistrationHandler{
             e.printStackTrace();
         }
     }
-    public String registration(String firstname, String lastname, String username, String email, String password) {
+    public String registration(String firstname, String lastname, String username, String email, String password, String registrationtype) {
 
         boolean existUsername = checkExist("username",username);
         boolean existEmail = checkExist("email",email);

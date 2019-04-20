@@ -10,6 +10,8 @@ public class User {
     private String password;
     private String email;
 
+    private String userType;
+
     private ArrayList<Playlist> playlistList;
 
     public User(int userID, String username, String firstname, String lastname, String password, String email) {
@@ -51,5 +53,13 @@ public class User {
 
     public ArrayList<Playlist> getPlaylistList() {
         return playlistList;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 }

@@ -3,7 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
 <?import javafx.scene.layout.HBox?>
 
 <!--<HBox fx:id="cellHbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#dragDetect" onDragDone="#dragDone" onDragDropped="#dragDrop" onDragEntered="#dragEntered" onDragExited="#dragExited" prefHeight="20.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.cellController">-->
@@ -19,8 +19,7 @@
       <Label fx:id="cellGenreLbl" prefHeight="30.0" prefWidth="121.0" text="Genre" />
       <MenuButton mnemonicParsing="false" prefHeight="28.0" prefWidth="10.0" style="-fx-background-color: transparent;">
         <items>
-          <MenuItem fx:id="deleteItem" mnemonicParsing="false" text="Delete" />
-            <MenuItem fx:id="addfavItem" mnemonicParsing="false" text="Add to Favorites" />
+            <RadioMenuItem fx:id="addfavItem" mnemonicParsing="false" text="Add to Favorites" />
         </items>
       </MenuButton>
    </children>
