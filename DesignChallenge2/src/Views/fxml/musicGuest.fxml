@@ -172,6 +172,16 @@
                                     </Label>
                                     <TextField fx:id="emailTf" layoutX="147.0" layoutY="253.0" />
                                     <JFXButton layoutX="632.0" layoutY="22.0" onAction="#backAccount" text="Back" />
+                                    <Label layoutX="367.0" layoutY="321.0" text="Most Played Song">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="mostPlayedLabel" layoutX="367.0" layoutY="355.0" text="Most Played Song">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                               </AnchorPane>
                            </children>
