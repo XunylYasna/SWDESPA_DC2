@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="287.0" prefWidth="417.0" stylesheets="@../css/start.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.addPlaylistController">
+    <children>
+        <Label layoutX="42.0" layoutY="42.0" styleClass="main-lbl" text="Add Playlist" />
+        <JFXTextField fx:id="playlistNameTf" layoutX="42.0" layoutY="95.0" prefHeight="26.0" prefWidth="330.0" promptText="Playlist Name" styleClass="tf" stylesheets="@../css/start.css" />
+        <Label fx:id="message" layoutX="48.0" layoutY="348.0" prefHeight="18.0" prefWidth="274.0" />
+        <JFXTextField fx:id="descriptionTf" layoutX="42.0" layoutY="141.0" prefHeight="26.0" prefWidth="330.0" promptText="Write a brief description" styleClass="tf" stylesheets="@../css/start.css" />
+        <JFXButton fx:id="confirmBtn" layoutX="289.0" layoutY="214.0" onAction="#confirm" styleClass="sumbit-btn" text="Confirm" />
+      <Label fx:id="statusLbl" layoutX="42.0" layoutY="180.0" prefHeight="18.0" prefWidth="330.0" textFill="#04ff00" />
+    </children>
+</AnchorPane>
