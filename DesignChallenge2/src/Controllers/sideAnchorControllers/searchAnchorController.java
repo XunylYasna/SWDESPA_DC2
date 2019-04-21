@@ -18,6 +18,7 @@ public class searchAnchorController {
     }
 
     public void updateQuery(String query){
+//        add yung sql class here to search
 
     }
 }

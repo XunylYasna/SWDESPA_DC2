@@ -74,7 +74,7 @@ public class StartController implements Initializable {
     }
 
     public void loginGuest(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../Views/fxml/musicGuest.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Views/fxml/musicGuest.fxml"));
         Scene scene = new Scene(root);
 
 //        get stage
