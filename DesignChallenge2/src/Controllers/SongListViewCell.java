@@ -69,13 +69,13 @@ public class SongListViewCell extends ListCell<Song> {
                 addfavItem.setDisable(true);
             }
 
-            deleteItem.setOnAction(event -> {
+       /*     deleteItem.setOnAction(event -> {
                 SongDeleteHandler songDeleteHandler = new SongDeleteHandler();
                 System.out.println("Delete " + getItem().getSongTitle() );
                 songDeleteHandler.deleteSong(getItem().getSongID());
                 getListView().getItems().remove(getItem());
             });
-
+*/
             addfavItem.setOnAction(event -> {
                 SongFavoriteHandler songFavoriteHandler = new SongFavoriteHandler();
                 songFavoriteHandler.favSong(getItem().getSongID(),userID);
