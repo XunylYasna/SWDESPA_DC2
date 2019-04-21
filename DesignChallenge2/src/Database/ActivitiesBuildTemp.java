@@ -15,13 +15,9 @@ public class ActivitiesBuildTemp {
     {
         ArrayList<EventLogs> eventLogsuser = new ArrayList<>();
 
-<<<<<<< HEAD
         int activity_id;
         String date;
         String description;
-=======
-        return eventLogsuser;
->>>>>>> 8b9ac75796a1f61b9a5d20f436304f3afe1e1990
 
         EventLogs eventlog;
 
