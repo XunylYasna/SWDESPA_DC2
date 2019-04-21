@@ -2,10 +2,7 @@ package Database;
 
 import Model.EventLogs;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class ActivitiesBuildTemp {
@@ -14,11 +11,34 @@ public class ActivitiesBuildTemp {
     Statement statement = null;
     ResultSet resultSet;
 
-    public ArrayList<EventLogs> getEvents(int UserID)
+   public ArrayList<EventLogs> getEvents(String username)
     {
         ArrayList<EventLogs> eventLogsuser = new ArrayList<>();
 
-        int
+        int activity_id;
+        String date;
+        String description;
 
+        EventLogs eventlog;
+
+        try
+        {
+            PreparedStatement prepStatement = myConn.prepareStatement("SELECT * FROM gulaplay.activity where username = ?");
+            prepStatement.setString(1, username);
+            resultSet = prepStatement.executeQuery();
+            while(resultSet.next()){
+                description = resultSet.getString("activitydescription");
+                date = resultSet.getString("dateofactivity");
+                activity_id = resultSet.getInt("idactivity");
+
+                eventlog = new EventLogs(username, description, date, activity_id);
+                eventLogsuser.add(eventlog);
+            }
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+        return eventLogsuser;
     }
+
+
 }
