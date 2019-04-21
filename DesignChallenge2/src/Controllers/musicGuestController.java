@@ -4,6 +4,9 @@ import Controllers.FacadePackages.AccountPane;
 import Controllers.FacadePackages.MusicPlayerBottom;
 import Controllers.FacadePackages.MusicPlayerMiddle;
 import Controllers.FacadePackages.MusicPlayerTop;
+import Controllers.sideAnchorControllers.searchAnchorController;
+import Controllers.sideAnchorControllers.songManagerAnchorController;
+import Controllers.sideAnchorControllers.userProfileAnchorController;
 import Database.BlobSongGetter;
 import Database.PlaylistBuildTemp;
 import Database.PlaylistSongAddHandler;
@@ -12,6 +15,7 @@ import Model.Playlist;
 import Model.Song;
 import Model.User;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXSlider;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -42,6 +46,7 @@ import java.util.ResourceBundle;
 
 public class musicGuestController implements Initializable {
 
+
     //    Music Player Top UI
     @FXML
     private Labeled selectedTitleLbl;
@@ -58,9 +63,35 @@ public class musicGuestController implements Initializable {
 
     //    Right Anchor Pane UI
     @FXML
-    private AnchorPane rightAnchor;
-    @FXML
-    private ScrollPane scrollAnchor;
+    private AnchorPane playerAnchor;
+
+//    Additional Feaetures of right anchor panes
+
+//    Search Anchor
+    public AnchorPane searchAnchor;
+    public Label searchLbl;
+    public JFXListView searchArtistLv;
+    public JFXListView searchSongLV;
+    public JFXListView searchPlaylistLv;
+
+// SongManager Anchor
+    public AnchorPane songManagerAnchor;
+    public Label artistnameLbl;
+    public Label numFollowersLbl;
+    public JFXButton uploadSongbtn;
+    public JFXListView artistsongLv;
+    public JFXListView albumSongLv;
+    public JFXButton albumBtn;
+
+//  userProfilescrollAnchor
+    public ScrollPane userProfilescrollAnchor;
+    public AnchorPane userprofileAnchor;
+    public Label usernameView1;
+    public JFXListView artistProfileLv;
+    public Label usernameProfile;
+    public JFXListView playlistsProfileLv;
+    public Label numProfile;
+    public Button followBtn;
 
 
     //    Music Player Middle UI
@@ -111,6 +142,10 @@ public class musicGuestController implements Initializable {
     MusicPlayerBottom musicPlayerBottom;
     MusicPlayerMiddle musicPlayerMiddle;
 
+    searchAnchorController searchAnchorController;
+    songManagerAnchorController songManagerAnchorController;
+    userProfileAnchorController userProfileAnchorController;
+
 //    Song passing
     BlobSongGetter blobSongGetter = new BlobSongGetter();
     private Song songSelected;
@@ -140,7 +175,6 @@ public class musicGuestController implements Initializable {
         userMenu.setText("Guest Gulapanatic");
         accountItem.setDisable(true);
         addPlaylistBtn.setDisable(true);
-        backAccount(null);
         sideSong(null);
 
     }
@@ -256,15 +290,18 @@ public class musicGuestController implements Initializable {
         musicPlayerMiddle.initialize(null,null);
         listViewPane.setVisible(true);
         tableViewPane.setVisible(false);
+        playerAnchor.toFront();
     }
 
     @FXML
     void sideArtist (ActionEvent event){
+        playerAnchor.toFront();
         filter = "Artist";
         musicPlayerTop.initialize(songSelected,"Artists", cover);
         musicPlayerMiddle.setGridPane(filter);
         listViewPane.setVisible(false);
         tableViewPane.setVisible(true);
+        playerAnchor.toFront();
     }
 
     @FXML
@@ -274,6 +311,7 @@ public class musicGuestController implements Initializable {
         musicPlayerMiddle.setGridPane(filter);
         listViewPane.setVisible(false);
         tableViewPane.setVisible(true);
+        playerAnchor.toFront();
     }
 
     @FXML
@@ -283,6 +321,7 @@ public class musicGuestController implements Initializable {
         musicPlayerMiddle.setGridPane(filter);
         listViewPane.setVisible(false);
         tableViewPane.setVisible(true);
+        playerAnchor.toFront();
     }
 
 
@@ -349,16 +388,12 @@ public class musicGuestController implements Initializable {
         sideVbox.getChildren().add(newplaylistButton);
     }
 
-    @FXML
-    public void accountMenu(ActionEvent event){
-        scrollAnchor.setVisible(true);
-        rightAnchor.setVisible(false);
-        accountPane.setFavoritesListView();
+    public void searchQuery(ActionEvent event) {
     }
 
-    @FXML
-    public void backAccount(ActionEvent event){
-        scrollAnchor.setVisible(false);
-        rightAnchor.setVisible(true);
+    public void followProfile(ActionEvent event) {
+    }
+    
+    public void accountMenu(ActionEvent event) {
     }
 }

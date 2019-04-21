@@ -57,4 +57,33 @@ public class MusicPlayerTop {
         this.selectedFromLbl.setText(from);
         this.acoverImg.setImage(acover);
     }
+
+    public void setMode(String mode){
+
+    }
+
+    public void setSong(){
+
+    }
+
+    public void setPlaylist(){
+
+    }
+
+    public void setAlbum(){
+
+    }
+
+    public void setArtist(){
+
+    }
+
+    public void setGenre(){
+
+    }
+
+    public void setButtonAction(){
+
+    }
+
 }
