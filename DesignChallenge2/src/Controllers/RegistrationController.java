@@ -33,12 +33,12 @@ public class RegistrationController {
     @FXML
     private Labeled messageLbl;
 
-    String registrationtype = "listener";
+    String user_type = "listener";
 
     @FXML
     void register(ActionEvent event){
         RegistrationHandler regis = new RegistrationHandler();
-        String message = regis.registration(firstnameTf.getText(), lastnameTf.getText(), usernameTf.getText(), emailTf.getText(), passwordPf.getText(), registrationtype);
+        String message = regis.registration(firstnameTf.getText(), lastnameTf.getText(), usernameTf.getText(), emailTf.getText(), passwordPf.getText(), user_type);
 
         messageLbl.setText(message);
     }
@@ -51,11 +51,11 @@ public class RegistrationController {
 
     public void setUsertype(ActionEvent event) {
         typeMenu.setText("Listener");
-        registrationtype = "listener";
+        user_type = "listener";
     }
 
     public void setArtisttype(ActionEvent event) {
         typeMenu.setText("Artist");
-        registrationtype = "artist";
+        user_type = "artist";
     }
 }

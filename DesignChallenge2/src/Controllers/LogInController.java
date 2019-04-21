@@ -62,7 +62,7 @@ public class LogInController{
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
             Parent root = fxmlLoader.load();
-            musicGuestController musicGuestController = (musicGuestController) fxmlLoader.getController();
+            musicGuestController musicGuestController = (musicGuestController)fxmlLoader.getController();
             musicGuestController.setUsername(username);
 
             Scene scene = new Scene(root);

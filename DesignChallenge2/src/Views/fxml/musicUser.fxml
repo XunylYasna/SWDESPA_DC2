@@ -55,6 +55,7 @@
                             </items>
                         </MenuButton>
                         <MediaView fx:id="videoMv" fitHeight="200.0" fitWidth="200.0" layoutX="8.0" layoutY="438.0" styleClass="vidPlayer" />
+                  <JFXButton layoutX="24.0" layoutY="269.0" text="Artist's Corner" textFill="WHITE" />
                     </children>
                 </AnchorPane>
                 <AnchorPane id="Content" fx:id="rightAnchor" minHeight="-1.0" minWidth="-1.0" prefHeight="702.0" prefWidth="824.0">

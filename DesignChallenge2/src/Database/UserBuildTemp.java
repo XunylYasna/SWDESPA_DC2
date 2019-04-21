@@ -18,6 +18,7 @@ public class UserBuildTemp {
         String lastName;
         String password;
         String email;
+        String usertype;
         ArrayList<Playlist> playlistList;
 
         User user = null;
@@ -33,7 +34,8 @@ public class UserBuildTemp {
                 lastName = resultSet.getString("lastname");
                 password = resultSet.getString("password");
                 email = resultSet.getString("email");
-                user = new User(userID, username,firstName, lastName, password, email);
+                usertype = resultSet.getString("user_type");
+                user = new User(userID, username,firstName, lastName, password, email,usertype);
             }
         } catch (SQLException e) {
             e.printStackTrace();
