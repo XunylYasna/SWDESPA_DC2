@@ -122,10 +122,12 @@ public class musicGuestController implements Initializable {
     private MenuButton userMenu;
     @FXML
     private MenuItem accountItem;
+    public MenuItem songManagerItem;
     @FXML
     private VBox sideVbox;
     @FXML
     private JFXButton addPlaylistBtn;
+
 
 
 //    Account UI
@@ -224,27 +226,6 @@ public class musicGuestController implements Initializable {
         refreshSongSelected();
     }
 
-
-//    Adding Song
-    @FXML
-    void addsongDialog(ActionEvent event) throws IOException {
-        Stage stage = new Stage();
-        Parent root;
-
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Views/fxml/addSong.fxml"));
-        root = fxmlLoader.load();
-
-        Scene scene = new Scene(root);
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setScene(scene);
-        addSongController newaddSongController = (addSongController) fxmlLoader.getController();
-        stage.showAndWait();
-
-        if(newaddSongController.getSongAdded() != null){
-            musicPlayerMiddle.addnewSong(newaddSongController.getSongAdded());
-        }
-    }
-
 //    Adding Playlist
     @FXML
     void addplaylistDialog(ActionEvent event) throws IOException {
@@ -327,20 +308,21 @@ public class musicGuestController implements Initializable {
     }
 
 
-    private void initUser(){
-        if(username == null){
+    private void initUser() {
+        songManagerItem.setDisable(true);
+        songManagerItem.setVisible(false);
+        if (username == null) {
 //            Kapag Guest
             userMenu.setText("Guest Gulapanatic");
             accountItem.setDisable(true);
             addPlaylistBtn.setDisable(true);
-        }
-        else{
+        } else {
             userMenu.setText(username);
             UserBuildTemp userBuildTemp = new UserBuildTemp();
             user = userBuildTemp.getUser(username);
             PlaylistBuildTemp playlistBuildTemp = new PlaylistBuildTemp();
             playlistsList = playlistBuildTemp.getPlaylists(user.getUserID());
-            for(int i = 0; i < playlistsList.size();i++){
+            for (int i = 0; i < playlistsList.size(); i++) {
                 addPlaylistButton(playlistsList.get(i));
             }
 
@@ -348,8 +330,14 @@ public class musicGuestController implements Initializable {
             accountItem.setDisable(false);
             addPlaylistBtn.setDisable(false);
             System.out.println(user.getUserID());
-        }
+            System.out.println(user.getUserType());
+            if (user.getUserType().equals("artist")) {
+                songManagerItem.setDisable(false);
+                songManagerItem.setVisible(true);
 
+                songManagerAnchorController = new songManagerAnchorController(songManagerAnchor, artistnameLbl, numFollowersLbl, uploadSongbtn, artistsongLv, albumSongLv, albumBtn, user);
+            }
+        }
     }
 
     private void addPlaylistButton(Playlist playlist){
@@ -400,5 +388,14 @@ public class musicGuestController implements Initializable {
     }
 
     public void accountMenu(ActionEvent event) {
+//        System.out.println(user.getUserID());
+        System.out.println("account Menu");
+        userProfileAnchorController.setUser(user, user.getUserID());
+        userProfilescrollAnchor.toFront();
+
+    }
+
+    public void songManager(ActionEvent event) {
+        songManagerAnchor.toFront();
     }
 }

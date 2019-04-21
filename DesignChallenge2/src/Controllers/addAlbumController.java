@@ -1,5 +1,6 @@
 package Controllers;
 
+import Database.AlbumAddHandler;
 import Model.User;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
@@ -18,6 +19,7 @@ public class addAlbumController {
     public JFXButton confirmBtn;
     public Label statusLbl;
 
+    File coverFile;
     User user;
 
     public void setUser(User user) {
@@ -26,7 +28,7 @@ public class addAlbumController {
 
     public void chooseSongCover(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
-        File coverFile = fileChooser.showOpenDialog(null);
+        coverFile = fileChooser.showOpenDialog(null);
         Image cover = new Image(coverFile.toURI().toString());
         BackgroundImage myBI= new BackgroundImage(cover,
                 BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
@@ -37,5 +39,9 @@ public class addAlbumController {
 
     public void confirm(ActionEvent event) {
 //        add album
+        AlbumAddHandler albumAddHandler = new AlbumAddHandler();
+        if(albumAddHandler.addAlbum(albumTf.getText(), coverFile, user.getUsername())){
+            statusLbl.setText("Album added successfully. You may now close the window");
+        }
     }
 }

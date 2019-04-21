@@ -7,6 +7,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.Labeled;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
@@ -16,6 +17,7 @@ import java.io.File;
 
 public class addSongController {
 
+    public Label message;
     @FXML
     private JFXButton uploadFBtn;
 
