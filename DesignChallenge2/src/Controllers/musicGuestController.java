@@ -17,6 +17,7 @@ import Model.User;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXSlider;
+import com.jfoenix.controls.JFXTextField;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -45,6 +46,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class musicGuestController implements Initializable {
+
 
 
     //    Music Player Top UI
@@ -115,6 +117,7 @@ public class musicGuestController implements Initializable {
     private MediaView videoMv;
 
 //    Music Player Side UI
+    public JFXTextField searchTf;
     @FXML
     private MenuButton userMenu;
     @FXML
@@ -135,7 +138,6 @@ public class musicGuestController implements Initializable {
     @FXML
     ListView<String> favoritesListView;
 
-    AccountPane accountPane;
 
 //    Packages
     MusicPlayerTop musicPlayerTop;
@@ -327,6 +329,7 @@ public class musicGuestController implements Initializable {
 
     private void initUser(){
         if(username == null){
+//            Kapag Guest
             userMenu.setText("Guest Gulapanatic");
             accountItem.setDisable(true);
             addPlaylistBtn.setDisable(true);
@@ -345,7 +348,6 @@ public class musicGuestController implements Initializable {
             accountItem.setDisable(false);
             addPlaylistBtn.setDisable(false);
             System.out.println(user.getUserID());
-            accountPane = new AccountPane(user, fnameTf, lnameTf, emailTf, favoritesListView);
         }
 
     }
@@ -389,11 +391,12 @@ public class musicGuestController implements Initializable {
     }
 
     public void searchQuery(ActionEvent event) {
+        searchAnchorController.updateQuery(searchTf.getText());
     }
 
     public void followProfile(ActionEvent event) {
     }
-    
+
     public void accountMenu(ActionEvent event) {
     }
 }

@@ -18,7 +18,7 @@ public class ActivitiesBuildTemp {
     {
         ArrayList<EventLogs> eventLogsuser = new ArrayList<>();
 
-        int
+        return eventLogsuser;
 
     }
 }
