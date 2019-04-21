@@ -122,7 +122,6 @@ public class musicGuestController implements Initializable {
     private MenuButton userMenu;
     @FXML
     private MenuItem accountItem;
-    public MenuItem songManagerItem;
     @FXML
     private VBox sideVbox;
     @FXML
@@ -178,10 +177,6 @@ public class musicGuestController implements Initializable {
         userMenu.setText("Guest Gulapanatic");
         accountItem.setDisable(true);
         addPlaylistBtn.setDisable(true);
-
-        userProfileAnchorController = new userProfileAnchorController(userProfilescrollAnchor,userprofileAnchor, usernameView1, artistProfileLv, usernameProfile, playlistsProfileLv, numProfile, followBtn);
-
-
         sideSong(null);
 
     }
@@ -230,7 +225,25 @@ public class musicGuestController implements Initializable {
     }
 
 
+//    Adding Song
+    @FXML
+    void addsongDialog(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root;
 
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Views/fxml/addSong.fxml"));
+        root = fxmlLoader.load();
+
+        Scene scene = new Scene(root);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(scene);
+        addSongController newaddSongController = (addSongController) fxmlLoader.getController();
+        stage.showAndWait();
+
+        if(newaddSongController.getSongAdded() != null){
+            musicPlayerMiddle.addnewSong(newaddSongController.getSongAdded());
+        }
+    }
 
 //    Adding Playlist
     @FXML
@@ -315,8 +328,6 @@ public class musicGuestController implements Initializable {
 
 
     private void initUser(){
-        songManagerItem.setDisable(true);
-        songManagerItem.setVisible(false);
         if(username == null){
 //            Kapag Guest
             userMenu.setText("Guest Gulapanatic");
@@ -337,13 +348,6 @@ public class musicGuestController implements Initializable {
             accountItem.setDisable(false);
             addPlaylistBtn.setDisable(false);
             System.out.println(user.getUserID());
-            System.out.println(user.getUserType());
-            if(user.getUserType().equals("artist")){
-                songManagerItem.setDisable(false);
-                songManagerItem.setVisible(true);
-
-                songManagerAnchorController = new songManagerAnchorController(songManagerAnchor, artistnameLbl, numFollowersLbl, uploadSongbtn, artistsongLv, albumSongLv, albumBtn, user);
-            }
         }
 
     }
@@ -387,24 +391,14 @@ public class musicGuestController implements Initializable {
     }
 
     public void searchQuery(ActionEvent event) {
-        searchAnchorController.updateQuery(searchTf.getText());
-        searchAnchor.toFront();
+        searchAnchorController.SearchKeyinArtist(searchTf.getText());
+        searchAnchorController.SearchKeyinSong(searchTf.getText());
+        searchAnchorController.SearchKeyinPlaylist(searchTf.getText());
     }
 
     public void followProfile(ActionEvent event) {
     }
 
     public void accountMenu(ActionEvent event) {
-//        System.out.println(user.getUserID());
-        System.out.println("account Menu");
-        userProfileAnchorController.setUser(user, user.getUserID());
-        userProfilescrollAnchor.toFront();
-
-    }
-
-
-
-    public void songManager(ActionEvent event) {
-        songManagerAnchor.toFront();
     }
 }
