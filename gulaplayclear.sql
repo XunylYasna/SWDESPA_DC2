@@ -26,8 +26,9 @@ DROP TABLE IF EXISTS `activity`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `activity` (
   `idactivity` date NOT NULL,
-  `iduser` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`idactivity`)
+  `dateofactivity` date NOT NULL,
+  `activitydescription` varchar(45) NOT NULL,
+  `username` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -38,6 +39,31 @@ CREATE TABLE `activity` (
 LOCK TABLES `activity` WRITE;
 /*!40000 ALTER TABLE `activity` DISABLE KEYS */;
 /*!40000 ALTER TABLE `activity` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `album`
+--
+
+DROP TABLE IF EXISTS `album`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `album` (
+  `albumname` varchar(45) NOT NULL,
+  `albumid` int(11) NOT NULL,
+  `songcover` mediumblob NOT NULL,
+  `artist` varchar(45) NOT NULL,
+  PRIMARY KEY (`albumid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `album`
+--
+
+LOCK TABLES `album` WRITE;
+/*!40000 ALTER TABLE `album` DISABLE KEYS */;
+/*!40000 ALTER TABLE `album` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -247,4 +273,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-21 20:42:29
+-- Dump completed on 2019-04-21 22:25:15
