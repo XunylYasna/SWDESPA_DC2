@@ -130,31 +130,6 @@
                         </AnchorPane>
                     </content>
                   </ScrollPane>
-                  <AnchorPane id="Content" fx:id="songManagerAnchor" minHeight="-1.0" minWidth="-1.0" prefHeight="702.0" prefWidth="824.0">
-                     <children>
-                        <AnchorPane prefHeight="642.0" prefWidth="726.0" style="-fx-background-color: white;">
-                           <children>
-                              <Label layoutX="14.0" layoutY="26.0" prefHeight="50.0" prefWidth="359.0" text="Song Manager">
-                                 <font>
-                                    <Font size="34.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="artistnameLbl" layoutX="14.0" layoutY="76.0" prefHeight="50.0" prefWidth="359.0" text="&lt;Artist Name&gt;">
-                                 <font>
-                                    <Font size="34.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="numFollowersLbl" layoutX="422.0" layoutY="101.0" prefHeight="18.0" prefWidth="183.0" text="# of followers" />
-                              <Label layoutX="14.0" layoutY="189.0" text="My Songs" />
-                              <JFXButton fx:id="uploadSongbtn" layoutX="14.0" layoutY="135.0" text="Upload Song" />
-                              <JFXListView fx:id="artistsongLv" layoutX="14.0" layoutY="207.0" prefHeight="400.0" prefWidth="230.0" />
-                              <Label layoutX="363.0" layoutY="198.0" text="My Albums" />
-                              <JFXListView fx:id="albumSongLv" layoutX="363.0" layoutY="228.0" prefHeight="200.0" prefWidth="345.0" />
-                              <JFXButton fx:id="albumBtn" layoutX="121.0" layoutY="135.0" text="Create Album" />
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
                   <AnchorPane id="Content" fx:id="playerAnchor" minHeight="-1.0" minWidth="-1.0" prefHeight="702.0" prefWidth="824.0">
                      <children>
                         <AnchorPane id="musicpane" maxWidth="723.2" minWidth="723.2" prefHeight="120.0" prefWidth="723.2">
@@ -210,6 +185,31 @@
                               </Pane>
                            </children>
                         </StackPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="Content" fx:id="songManagerAnchor" minHeight="-1.0" minWidth="-1.0" prefHeight="702.0" prefWidth="824.0">
+                     <children>
+                        <AnchorPane prefHeight="642.0" prefWidth="726.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="26.0" prefHeight="50.0" prefWidth="359.0" text="Song Manager">
+                                 <font>
+                                    <Font size="34.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="artistnameLbl" layoutX="14.0" layoutY="76.0" prefHeight="50.0" prefWidth="359.0" text="&lt;Artist Name&gt;">
+                                 <font>
+                                    <Font size="34.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="numFollowersLbl" layoutX="422.0" layoutY="101.0" prefHeight="18.0" prefWidth="183.0" text="# of followers" />
+                              <Label layoutX="14.0" layoutY="189.0" text="My Songs" />
+                              <JFXButton fx:id="uploadSongbtn" layoutX="14.0" layoutY="135.0" text="Upload Song" />
+                              <JFXListView fx:id="artistsongLv" layoutX="14.0" layoutY="207.0" prefHeight="400.0" prefWidth="230.0" />
+                              <Label layoutX="363.0" layoutY="198.0" text="My Albums" />
+                              <JFXListView fx:id="albumSongLv" layoutX="363.0" layoutY="228.0" prefHeight="200.0" prefWidth="345.0" />
+                              <JFXButton fx:id="albumBtn" layoutX="121.0" layoutY="135.0" text="Create Album" />
+                           </children>
+                        </AnchorPane>
                      </children>
                   </AnchorPane>
                </children>

@@ -19,6 +19,7 @@ public class userProfileAnchorController {
 
 
     public userProfileAnchorController(ScrollPane userProfilescrollAnchor, AnchorPane userprofileAnchor, Label usernameView1, JFXListView artistProfileLv, Label usernameProfile, JFXListView playlistsProfileLv, Label numProfile, Button followBtn) {
+        System.out.println("hi");
         this.userProfilescrollAnchor = userProfilescrollAnchor;
         this.userprofileAnchor = userprofileAnchor;
         this.usernameView1 = usernameView1;

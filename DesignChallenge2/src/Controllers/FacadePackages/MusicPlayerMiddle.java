@@ -102,6 +102,9 @@ public class MusicPlayerMiddle {
             }
         }
 
+        if(column == 0)
+            column++;
+
         for(int c = 0; c < stringList.size() % 3; c++){
             JFXButton button = new JFXButton(stringList.get(column + row - 1));
             button.getStyleClass().add("grid-Btn");
