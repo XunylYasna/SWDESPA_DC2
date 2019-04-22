@@ -1,6 +1,7 @@
 package Controllers;
 
 import Database.SongDeleteHandler;
+import Database.editSongtoAlbumHandler;
 import Model.Album;
 import Model.Song;
 import javafx.event.EventHandler;
@@ -40,15 +41,14 @@ public class ArtistAlbumController extends ListCell<Album> {
                 }
 
             }
-
-
-
+            
 
             setOnDragDropped(new EventHandler<DragEvent>() {
                 @Override
                 public void handle(DragEvent event) {
                     Dragboard db = event.getDragboard();
-
+                    editSongtoAlbumHandler editSongtoAlbumHandler = new editSongtoAlbumHandler();
+                    editSongtoAlbumHandler.putSongtoAlbum(Integer.parseInt(db.getString()), album.getIdAlbum());
                 }
             });
 
