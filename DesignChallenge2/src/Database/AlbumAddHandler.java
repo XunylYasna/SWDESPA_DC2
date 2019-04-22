@@ -18,6 +18,7 @@ public class AlbumAddHandler {
     public Boolean addAlbum(String albumName, File cover, String user) {
 
         Boolean success = false;
+        EventRecorder eventRecorder = null;
 //      temp
         String sql = "INSERT INTO album (albumname, songcover, artist)\n" +
                 "values (?, ?, ?)";// insert insert user query here
@@ -35,6 +36,9 @@ public class AlbumAddHandler {
             prepStatement.setString(3, user);
 
             prepStatement.execute();
+
+            eventRecorder = new EventRecorder("User added album" + albumName, "artist");
+
             success = true;
         } catch (SQLException e) {
             e.printStackTrace();

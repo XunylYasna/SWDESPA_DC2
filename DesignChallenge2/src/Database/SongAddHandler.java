@@ -17,6 +17,7 @@ public class SongAddHandler {
     public Song addSong(String title, String artist, String genre, String album, File photo, File song) {
 
 //      temp
+        EventRecorder eventRecorder = null;
         FileInputStream input;
         String sql = "INSERT INTO song (MusicTitle, Artist, Genre, Album, AlbumCover, SongFile)\n" +
                 "values (?, ?, ?, ?, ?, ?)";// insert insert user query here
@@ -61,6 +62,7 @@ public class SongAddHandler {
                 newGenre = resultSet.getString("Album");
             }
 
+            eventRecorder = new EventRecorder("User added " + newSongTitle, "artist");
 
             return new Song(songID, newSongTitle,newArtist, newAlbum, newGenre);
 

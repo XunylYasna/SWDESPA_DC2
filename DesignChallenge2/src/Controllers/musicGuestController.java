@@ -311,6 +311,7 @@ public class musicGuestController implements Initializable {
     private void initUser() {
         songManagerItem.setDisable(true);
         songManagerItem.setVisible(false);
+
         if (username == null) {
 //            Kapag Guest
             userMenu.setText("Guest Gulapanatic");

@@ -8,7 +8,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.sql.*;
 
-public class PlayListAddHandler {
+public class PlayListAddHandler{
     PreparedStatement prepStatement;
     Connection myConn = DatabaseConnection.getDatabaseConn();
     Statement statement = null;
@@ -19,6 +19,7 @@ public class PlayListAddHandler {
 
 //      temp
         Playlist playlist = null;
+        EventRecorder eventRecorder = null;
         String sql = "INSERT INTO playlist (PlaylistName, PlaylistDescription, UserID)\n" +
                 "values (?, ?, ?)";// insert insert user query here
         try {
@@ -40,10 +41,14 @@ public class PlayListAddHandler {
             }
 
             playlist = new Playlist(newPlaylistID, playlistName, playlistDescription, userID);
+            eventRecorder = new EventRecorder("User added " + playlistName, Integer.toString(userID));
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
         return playlist;
     }
+
+
 }

@@ -11,7 +11,7 @@ public class ActivitiesBuildTemp {
     Statement statement = null;
     ResultSet resultSet;
 
-   public ArrayList<EventLogs> getEvents(String username)
+   public ArrayList<EventLogs>getEvents(String username)
     {
         ArrayList<EventLogs> eventLogsuser = new ArrayList<>();
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="140.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="albumCover" fitHeight="93.0" fitWidth="93.0" layoutX="24.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="albumLabel" alignment="CENTER" layoutX="12.0" layoutY="99.0" prefHeight="18.0" prefWidth="116.0" text="Album" textAlignment="CENTER" />
+      <Label fx:id="artistLabel" alignment="CENTER" layoutX="12.0" layoutY="117.0" prefHeight="18.0" prefWidth="116.0" text="Artist" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

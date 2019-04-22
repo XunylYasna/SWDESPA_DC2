@@ -1,6 +1,7 @@
 package Controllers;
 
 
+import Database.EventRecorder;
 import Database.PlayListAddHandler;
 import Model.Playlist;
 import com.jfoenix.controls.JFXTextField;
@@ -20,7 +21,7 @@ public class addPlaylistController {
     private int userID;
     PlayListAddHandler playListAddHandler = new PlayListAddHandler();
     Playlist playlistadded;
-
+    EventRecorder eventRecorder = null;
 
     @FXML
     void confirm(ActionEvent event){
@@ -28,6 +29,7 @@ public class addPlaylistController {
         String description = descriptionTf.getText();
 
         playlistadded = playListAddHandler.addPlaylist(playlistName,description,userID);
+        eventRecorder = new EventRecorder("User created" + playlistName, "user");
 
         if(playlistadded != null){
             statusLbl.setText("Playlist added. You may now close the window");

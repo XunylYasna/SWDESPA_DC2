@@ -12,7 +12,7 @@ public class PlaylistSongAddHandler {
     ResultSet resultSet;
 
     public void addSongtoPlaylist(int songID, int playlistID) {
-
+        EventRecorder eventRecorder = null;
         String sql = "INSERT INTO songtoplaylist (SongID, PlaylistID)\n" +
                 "values (?, ?)";// insert insert user query here
         try {
@@ -23,6 +23,7 @@ public class PlaylistSongAddHandler {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        eventRecorder = new EventRecorder("User added a song to a playlist" , "user");
 
         return;
     }

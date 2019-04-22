@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="283.0" prefWidth="480.0" stylesheets="@../../../../../DC3/DC3/designchallenge3/src/sample/Views/css/start.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.EventHandlers.addSongController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="283.0" prefWidth="480.0" stylesheets="@../../../../../DC3/DC3/designchallenge3/src/sample/Views/css/start.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.addSongController">
    <children>
       <Label layoutX="42.0" layoutY="42.0" styleClass="main-lbl" text="Add Song" />
       <JFXTextField fx:id="titleTf" layoutX="42.0" layoutY="95.0" prefHeight="26.0" prefWidth="330.0" promptText="Song Title" styleClass="tf" stylesheets="@../../../../../DC3/DC3/designchallenge3/src/sample/Views/css/start.css" />
